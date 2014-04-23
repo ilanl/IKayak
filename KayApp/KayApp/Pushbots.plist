@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict><key>App_ID</key>
+        <string>526cbb9d4deeaeee07000b13</string>
+        <key>pushOptions</key>
+        <dict>
+            <key>badge</key>
+            <true/>
+            <key>sound</key>
+            <true/>
+            <key>alert</key>
+            <false/>
+        </dict>
+    </dict>
+</plist>
