@@ -1,0 +1,19 @@
+
+* Need to improve the grid in Client for 3D requests
+
+* Add services:
+1) GetLookups (kayaks, trips, bookings)
+
+2) RulesOut (save + lookup)
+
+3) Setup  
+- Control task status (start/stop)
+
+* Add integration tests
+
+
+ 
+
+
+
+

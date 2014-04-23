@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56E679B5-A49B-4B07-8D7E-DAD58452A884}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IKayak.Schemas</RootNamespace>
+    <AssemblyName>IKayak.Schemas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Accounts\LoginRequest.cs" />
+    <Compile Include="Contracts\Accounts\LoginResponse.cs" />
+    <Compile Include="Contracts\Bookings\BookingRequest.cs" />
+    <Compile Include="Contracts\Bookings\BookingResponse.cs" />
+    <Compile Include="Contracts\Forecasts\ForecastRequest.cs" />
+    <Compile Include="Contracts\Forecasts\ForecastResponse.cs" />
+    <Compile Include="Contracts\Preferences\PreferenceRequest.cs" />
+    <Compile Include="Contracts\Preferences\PreferenceResponse.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\BookingContainer.cs" />
+    <Compile Include="Models\BookingState.cs" />
+    <Compile Include="Models\Exceptions\ActionNotSupportedBusinessException.cs" />
+    <Compile Include="Models\Exceptions\BookingNotFoundBusinessException.cs" />
+    <Compile Include="Models\Exceptions\UserGeneralBusinessException.cs" />
+    <Compile Include="Models\Forecast.cs" />
+    <Compile Include="Models\KayakPref.cs" />
+    <Compile Include="Models\KayakType.cs" />
+    <Compile Include="Models\LightKayakPref.cs" />
+    <Compile Include="Models\LightTimePref.cs" />
+    <Compile Include="Models\LookUpSet.cs" />
+    <Compile Include="Models\Exceptions\ConfigurationBusinessException.cs" />
+    <Compile Include="Models\Exceptions\TripExpiredBusinessException.cs" />
+    <Compile Include="Models\Kayak.cs" />
+    <Compile Include="Models\Preference.cs" />
+    <Compile Include="Models\Set.cs" />
+    <Compile Include="Models\Timing.cs" />
+    <Compile Include="Models\Trip.cs" />
+    <Compile Include="Models\TripChangeEventArgs.cs" />
+    <Compile Include="Models\TripContainer.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Breezback\AppKickStart.Schemas\AppKickStart.Schemas.csproj">
+      <Project>{F64D839D-0F01-41E6-AF3F-EF131B8A144B}</Project>
+      <Name>AppKickStart.Schemas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,21 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">  
+  <body>
+    
+      #foreach($c in $containers)
+      <div>
+        <ul> <span> $c.DayOfWeek </span>
+
+          #foreach($b in $c.Bookings)
+          <li>
+            
+			<span> $b.KayakName </span>
+            <a href="http://$domain/cancel.aspx?n=$user.Name&&p=$user.Password&&t=$b.TripKey">Cancel</a>
+          </li>
+          #end
+        </ul>
+      </div>
+      #end
+    
+  </body>
+</html>

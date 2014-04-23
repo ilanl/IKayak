@@ -1,0 +1,76 @@
+log4net: log4net assembly [log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821]. Loaded from [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\090d19c0\6d7c1ed2\assembly\dl3\b75823d0\00d0204f_32c9cc01\log4net.DLL]. (.NET Runtime [4.0.30319.1] on Microsoft Windows NT 6.1.7600.0)
+log4net: DefaultRepositorySelector: defaultRepositoryType [log4net.Repository.Hierarchy.Hierarchy]
+log4net: DefaultRepositorySelector: Creating repository for assembly [IKayak, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: DefaultRepositorySelector: Assembly [IKayak, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\090d19c0\6d7c1ed2\assembly\dl3\4f1e19ca\db42e5e3_f6c7ce01\IKayak.DLL]
+log4net: DefaultRepositorySelector: Assembly [IKayak, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: DefaultRepositorySelector: Assembly [IKayak, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: DefaultRepositorySelector: Creating repository [log4net-default-repository] using type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: XmlConfigurator: configuring repository [log4net-default-repository] using .config file section
+log4net: XmlConfigurator: Application config file is [C:\Development\IKayak\Src\KayakApp\web.config]
+log4net: XmlConfigurator: Configuring Repository [log4net-default-repository]
+log4net: XmlHierarchyConfigurator: Configuration update mode [Merge].
+log4net: XmlHierarchyConfigurator: Logger [root] Level string is [INFO].
+log4net: XmlHierarchyConfigurator: Logger [root] level set to [name="INFO",value=40000].
+log4net: XmlHierarchyConfigurator: Loading Appender [RollingLogFileAppender] type: [AppKickStart.Common.Logging.CustomRollingFileAppender]
+log4net: SystemInfo: Loaded type [AppKickStart.Common.Logging.CustomRollingFileAppender] from assembly [AppKickStart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] by searching loaded assemblies.
+log4net: XmlHierarchyConfigurator: Setting Property [File] to String value [..\Logs\IKayak\Log.txt]
+log4net: XmlHierarchyConfigurator: Setting Property [LockingModel] to object [log4net.Appender.FileAppender+MinimalLock]
+log4net: XmlHierarchyConfigurator: Setting Property [AppendToFile] to Boolean value [True]
+log4net: XmlHierarchyConfigurator: Setting Property [DatePattern] to String value [yyyyMMdd]
+log4net: XmlHierarchyConfigurator: Setting Property [MaximumFileSize] to String value [1MB]
+log4net: XmlHierarchyConfigurator: Setting Property [MaxSizeRollBackups] to Int32 value [10]
+log4net: XmlHierarchyConfigurator: Setting Property [AcceptOnMatch] to Boolean value [True]
+log4net: XmlHierarchyConfigurator: Setting Property [LevelMin] to Level value [DEBUG]
+log4net: XmlHierarchyConfigurator: Setting Property [LevelMax] to Level value [FATAL]
+log4net: XmlHierarchyConfigurator: Setting Collection Property [AddFilter] to object [log4net.Filter.LevelRangeFilter]
+log4net: PatternParser: Converter [message] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [newline] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: XmlHierarchyConfigurator: Setting Property [ConversionPattern] to String value [%d [%t]  %-5p %m%n]
+log4net: PatternParser: Converter [d] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [literal] Option [ [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [t] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [literal] Option []  ] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [p] Option [] Format [min=5,max=2147483647,leftAlign=True]
+log4net: PatternParser: Converter [literal] Option [ ] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [m] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: PatternParser: Converter [n] Option [] Format [min=-1,max=2147483647,leftAlign=False]
+log4net: XmlHierarchyConfigurator: Setting Property [Layout] to object [log4net.Layout.PatternLayout]
+log4net: RollingFileAppender: Type = [0], r0 = [19700101], r1 = [19700101]
+log4net: RollingFileAppender: Type = [1], r0 = [19700101], r1 = [19700101]
+log4net: RollingFileAppender: Type = [2], r0 = [19700101], r1 = [19700101]
+log4net: RollingFileAppender: Type = [3], r0 = [19700101], r1 = [19700102]
+log4net: RollingFileAppender: Searched for existing files in [C:\Development\IKayak\Src\Logs\IKayak]
+log4net: RollingFileAppender: curSizeRollBackups starts at [0]
+log4net: RollingFileAppender: [20131012] vs. [20131013]
+log4net: RollingFileAppender: Initial roll over to [C:\Development\IKayak\Src\Logs\IKayak\Log.txt20131012]
+log4net: RollingFileAppender: Moving [C:\Development\IKayak\Src\Logs\IKayak\Log.txt] -> [C:\Development\IKayak\Src\Logs\IKayak\Log.txt20131012]
+log4net: RollingFileAppender: curSizeRollBackups after rollOver at [0]
+log4net: FileAppender: Opening file for writing [C:\Development\IKayak\Src\Logs\IKayak\Log.txt] append [True]
+log4net: XmlHierarchyConfigurator: Created Appender [RollingLogFileAppender]
+log4net: XmlHierarchyConfigurator: Adding appender named [RollingLogFileAppender] to logger [root].
+log4net: XmlHierarchyConfigurator: Hierarchy Threshold []
+log4net: DefaultRepositorySelector: Creating repository for assembly [AppKickStart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\090d19c0\6d7c1ed2\assembly\dl3\ebb54aba\ca6ee5d7_b3c6ce01\AppKickStart.Common.DLL]
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: DefaultRepositorySelector: repository [log4net-default-repository] already exists, using repository type [log4net.Repository.Hierarchy.Hierarchy]
+App started
+log4net: DefaultRepositorySelector: Creating repository for assembly [AppKickStart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] Loaded From [C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\090d19c0\6d7c1ed2\assembly\dl3\c9df6de5\5603c3d8_b3c6ce01\AppKickStart.Application.DLL]
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] does not have a RepositoryAttribute specified.
+log4net: DefaultRepositorySelector: Assembly [AppKickStart.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null] using repository [log4net-default-repository] and repository type [log4net.Repository.Hierarchy.Hierarchy]
+log4net: DefaultRepositorySelector: repository [log4net-default-repository] already exists, using repository type [log4net.Repository.Hierarchy.Hierarchy]
+ProcessRequest [setup] - Start
+Request [{"Action":1,"LogLevel":"DEBUG","SecurityToken":null}]
+Request Arrived:
+{"Action":1,"LogLevel":"DEBUG","SecurityToken":null}
+Fatal Level Test
+Error Level Test
+Warn Level Test
+Info Level Test
+Debug Level Test
+ProcessRequest [setup] - End
+Response [{"ConfigResult":{"LogLevel":"DEBUG","SettingResults":[{"Key":"Interval","Value":"300"}]},"SecurityToken":null,"Status":"Success","Error":null}]
+Response Sent:
+{"ConfigResult":{"LogLevel":"DEBUG","SettingResults":[{"Key":"Interval","Value":"300"}]},"SecurityToken":null,"Status":"Success","Error":null}
+log4net: Hierarchy: Shutdown called on Hierarchy [log4net-default-repository]

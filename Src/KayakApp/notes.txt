@@ -1,0 +1,35 @@
+﻿
+Pushbots
+
+Application title : Kayapp
+ Application ID :526cbb9d4deeaeee07000b13
+ Application Secret :bfbe24c92a3c3c1d880b7a5ecb58a3b9
+
+ URL	
+https://api.pushbots.com/push/one
+Description	Push a notification to a single device.
+Method	 POST
+Format	 JSON
+Request Headers :
+Parameter	Desription
+X-PUSHBOTS-APPID	Application ID
+X-PUSHBOTS-SECRET	Application Secret Key
+content-Type	application/json
+Parameters: JSON Payload
+Parameter	Status	Type	Description
+platform	 REQUIRED	String	0 for iOS.
+1 for Android.
+token	 REQUIRED	String	Device Token.
+msg	 REQUIRED	String	Notification Message.
+sound	 REQUIRED	String	Notification Sound.
+badge	 REQUIRED	String	Notification Badge number.
+payload	 OPTIONAL	JSON	Custom fields.
+Response
+{'message' : 'err'}
+cURL example
+curl -X POST \
+      -H "x-pushbots-appid: 526cbb9d4deeaeee07000b13" \
+      -H "x-pushbots-secret: bfbe24c92a3c3c1d880b7a5ecb58a3b9" \
+      -H "Content-Type: application/json" \
+      -d '{"platform" : String , "token" : String , "msg" : String , "sound" : String , "badge" : String , "payload" : JSON}' \
+      https://api.pushbots.com/push/one

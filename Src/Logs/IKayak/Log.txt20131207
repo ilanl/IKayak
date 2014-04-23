@@ -1,0 +1,157 @@
+2013-12-07 21:58:19 [5]  INFO  App started
+2013-12-07 21:58:22 [5]  INFO  Default page test
+2013-12-07 22:03:20 [5]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:03:20 [5]  DEBUG Creating Database... [Start]
+2013-12-07 22:03:20 [5]  FATAL Could not complete Db creation: 
+2013-12-07 22:03:20 [5]  DEBUG Creating Database... [End]
+2013-12-07 22:03:20 [5]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:03:20 [5]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:08:20 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:08:20 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:08:20 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:08:20 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:08:20 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:08:20 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:13:20 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:13:20 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:13:20 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:13:20 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:13:20 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:13:20 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:18:20 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:18:20 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:18:20 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:18:20 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:18:20 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:18:20 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:23:20 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:23:20 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:23:20 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:23:20 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:23:20 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:23:20 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:28:22 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:28:22 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:28:22 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:28:22 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:28:22 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:28:22 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:33:22 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:33:22 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:33:22 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:33:22 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:33:22 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:33:22 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:38:22 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:38:22 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:38:22 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:38:22 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:38:22 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:38:22 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:43:22 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:43:22 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:43:22 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:43:22 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:43:22 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:43:22 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:48:23 [11]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:48:23 [11]  DEBUG Creating Database... [Start]
+2013-12-07 22:48:23 [11]  FATAL Could not complete Db creation: 
+2013-12-07 22:48:23 [11]  DEBUG Creating Database... [End]
+2013-12-07 22:48:23 [11]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:48:23 [11]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:52:11 [3]  INFO  Scheduled task [KayakBookingTask] started...
+2013-12-07 22:52:11 [3]  DEBUG Creating Database... [Start]
+2013-12-07 22:52:11 [3]  FATAL Could not complete Db creation: 
+2013-12-07 22:52:11 [3]  DEBUG Creating Database... [End]
+2013-12-07 22:52:11 [3]  ERROR An error occured:    at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+System.Data.SQLite.SQLiteException (0x80004005): Unable to open the database file
+   at System.Data.SQLite.SQLite3.Open(String strFilename, SQLiteConnectionFlags connectionFlags, SQLiteOpenFlagsEnum openFlags, Int32 maxPoolSize, Boolean usePool)
+   at System.Data.SQLite.SQLiteConnection.Open()
+   at IKayak.Persistency.Users.UserQuery.GetAll() in c:\Development\IKayak\Src\KayakApp\Persistency\Users\UserQuery.cs:line 108
+   at IKayak.Tasks.KayakBookingTask.DoWork() in c:\Development\IKayak\Src\KayakApp\Tasks\KayakBookingTask.cs:line 60
+2013-12-07 22:52:11 [3]  INFO  Scheduled task [KayakBookingTask] ended.
+2013-12-07 22:52:11 [3]  INFO  Scheduled task [ForecastTask] started...
