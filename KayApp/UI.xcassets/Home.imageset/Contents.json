@@ -11,6 +11,10 @@
       "filename" : "hompage picture retina size.png"
     },
     {
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
       "idiom" : "iphone",
       "scale" : "1x",
       "filename" : "hompage picture retina size-2.png"
@@ -19,6 +23,10 @@
       "idiom" : "iphone",
       "scale" : "2x",
       "filename" : "hompage picture retina size-3.png"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
     }
   ],
   "info" : {

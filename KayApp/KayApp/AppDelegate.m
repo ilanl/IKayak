@@ -28,14 +28,14 @@ AppDelegate *appContext;
         
         [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"1593DB" withAlpha:1.0]];
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, -100) forBarMetrics:UIBarMetricsDefault];
-        
+        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 50) forBarMetrics:UIBarMetricsDefault];
     }
+    
     [Pushbots getInstance];
     
     NSString *appName = [[NSBundle bundleWithIdentifier:@"BundleIdentifier"] objectForInfoDictionaryKey:@"CFBundleExecutable"];
     appContext = self;
-    [AppLog Log:@"didFinishLaunching"];
+    [AppLog Log:@"didFinishLaunching - appName: @%", appName];
     
     // Let the device know we want to receive push notifications
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
@@ -50,6 +50,40 @@ AppDelegate *appContext;
     }
     
     return YES;
+}
+
+- (void)checkCredentials
+
+{
+    
+    User *user = [[DbAdapter getInstance] currentUser];
+    
+    if (user == nil || user.name == nil || user.password == nil)
+        
+    {
+        
+        [self performSegueWithIdentifier:@"goToLogin" sender:self];
+        
+        return;
+        
+    }
+    
+    
+    
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    
+    [self.view addSubview: activityView];
+    
+    activityView.center = CGPointMake(100,200);
+    
+    [activityView startAnimating];
+    
+    
+    
+    NSLog(@"check credentials");
+    
+    [self downloadAll:user.name withPassword:user.password withActivityIndicator:activityView withController:self];
+    
 }
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken

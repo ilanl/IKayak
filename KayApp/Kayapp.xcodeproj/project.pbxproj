@@ -102,7 +102,6 @@
 		D2882F7F17EC7EDD0054841B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F7E17EC7EDD0054841B /* UIKit.framework */; };
 		D2882F8117EC7EDD0054841B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F8017EC7EDD0054841B /* Foundation.framework */; };
 		D2882F8317EC7EDD0054841B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F8217EC7EDD0054841B /* CoreGraphics.framework */; };
-		D2882F8917EC7EDD0054841B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2882F8717EC7EDD0054841B /* InfoPlist.strings */; };
 		D2882F8B17EC7EDD0054841B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2882F8A17EC7EDD0054841B /* main.m */; };
 		D2882F9517EC7EDD0054841B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2882F9417EC7EDD0054841B /* Default-568h@2x.png */; };
 		D2882FAA17EC7F790054841B /* DayPref.m in Sources */ = {isa = PBXBuildFile; fileRef = D2882FA517EC7F790054841B /* DayPref.m */; };
@@ -116,28 +115,6 @@
 		D2882FDB17EC7FE00054841B /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2882FD317EC7FE00054841B /* RankViewController.m */; };
 		D2882FDF17EC84A90054841B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2882FDE17EC84A90054841B /* LoginViewController.m */; };
 		D288CB481823AD84000D1C3E /* UI.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D288CB471823AD83000D1C3E /* UI.xcassets */; };
-		D288CC161823AF62000D1C3E /* Account.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBA71823AF61000D1C3E /* Account.jpg */; };
-		D288CC171823AF62000D1C3E /* boats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBA81823AF61000D1C3E /* boats.jpg */; };
-		D288CC181823AF62000D1C3E /* booking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBA91823AF61000D1C3E /* booking.jpg */; };
-		D288CC191823AF62000D1C3E /* day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAA1823AF61000D1C3E /* day.jpg */; };
-		D288CC1A1823AF62000D1C3E /* days.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAB1823AF61000D1C3E /* days.jpg */; };
-		D288CC1B1823AF62000D1C3E /* explaination.psd in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAC1823AF61000D1C3E /* explaination.psd */; };
-		D288CC1C1823AF62000D1C3E /* homepage retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAD1823AF61000D1C3E /* homepage retina.jpg */; };
-		D288CC1D1823AF62000D1C3E /* homepage retina1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAE1823AF61000D1C3E /* homepage retina1.jpg */; };
-		D288CC1E1823AF62000D1C3E /* homepage with menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBAF1823AF61000D1C3E /* homepage with menu.jpg */; };
-		D288CC1F1823AF62000D1C3E /* hompage without menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB01823AF61000D1C3E /* hompage without menu.jpg */; };
-		D288CC201823AF62000D1C3E /* account.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB21823AF61000D1C3E /* account.jpg */; };
-		D288CC211823AF62000D1C3E /* Boats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB31823AF61000D1C3E /* Boats.jpg */; };
-		D288CC221823AF62000D1C3E /* Booking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB41823AF61000D1C3E /* Booking.jpg */; };
-		D288CC231823AF62000D1C3E /* day.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB51823AF61000D1C3E /* day.jpg */; };
-		D288CC241823AF62000D1C3E /* days.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB61823AF61000D1C3E /* days.jpg */; };
-		D288CC251823AF62000D1C3E /* home page with menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB71823AF61000D1C3E /* home page with menu.jpg */; };
-		D288CC261823AF62000D1C3E /* home page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB81823AF61000D1C3E /* home page.jpg */; };
-		D288CC271823AF62000D1C3E /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBB91823AF61000D1C3E /* login.jpg */; };
-		D288CC281823AF62000D1C3E /* more info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBBA1823AF61000D1C3E /* more info.jpg */; };
-		D288CC291823AF62000D1C3E /* log in.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBBB1823AF62000D1C3E /* log in.jpg */; };
-		D288CC2A1823AF62000D1C3E /* splash iphone4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBBC1823AF62000D1C3E /* splash iphone4.jpg */; };
-		D288CC2B1823AF62000D1C3E /* splash retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D288CBBD1823AF62000D1C3E /* splash retina.jpg */; };
 		D29196DD1833CDBD003F133F /* menu-box.png in Resources */ = {isa = PBXBuildFile; fileRef = D29196DC1833CDBD003F133F /* menu-box.png */; };
 		D29196EC1833CE29003F133F /* Account.png in Resources */ = {isa = PBXBuildFile; fileRef = D29196DF1833CE29003F133F /* Account.png */; };
 		D29196ED1833CE29003F133F /* Account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29196E01833CE29003F133F /* Account@2x.png */; };
@@ -194,8 +171,8 @@
 		D29FE19D1848B2C200972868 /* long-wave-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29FE19B1848B2C200972868 /* long-wave-icon@2x.png */; };
 		D29FE19F1848BEB600972868 /* homepage-white-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29FE19E1848BEB600972868 /* homepage-white-line@2x.png */; };
 		D29FE1A11848BF4100972868 /* homepage-white-line.png in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1A01848BF4000972868 /* homepage-white-line.png */; };
-		D29FE1A41848E3DF00972868 /* Splash@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1A21848E3DF00972868 /* Splash@2x.jpg */; };
-		D29FE1A51848E3DF00972868 /* Splash-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1A31848E3DF00972868 /* Splash-568h@2x.jpg */; };
+		D29FE1A41848E3DF00972868 /* splash@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1A21848E3DF00972868 /* splash@2x.jpg */; };
+		D29FE1A51848E3DF00972868 /* splash-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1A31848E3DF00972868 /* splash-568h@2x.jpg */; };
 		D29FE1AC1848E70C00972868 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1AA1848E70C00972868 /* Default.png */; };
 		D29FE1AD1848E70C00972868 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D29FE1AB1848E70C00972868 /* Default@2x.png */; };
 		D29FE1B01848EE5E00972868 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29FE1AF1848EE5E00972868 /* TitleView.m */; };
@@ -238,6 +215,7 @@
 		D2E11D7218282F7200425906 /* hompage-picture-iphone4-size.png in Resources */ = {isa = PBXBuildFile; fileRef = D2E11D7018282F7200425906 /* hompage-picture-iphone4-size.png */; };
 		D2E3553318167E4D007E0EBA /* memo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D2E3553218167E4D007E0EBA /* memo.m4a */; };
 		D2E3553518169DC4007E0EBA /* budda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2E3553418169DC4007E0EBA /* budda.mp3 */; };
+		D2E5667419D55E0200C5245C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2882F8717EC7EDD0054841B /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -429,28 +407,6 @@
 		D2882FDD17EC84A90054841B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D2882FDE17EC84A90054841B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D288CB471823AD83000D1C3E /* UI.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UI.xcassets; sourceTree = "<group>"; };
-		D288CBA71823AF61000D1C3E /* Account.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Account.jpg; path = "final screens/Account.jpg"; sourceTree = "<group>"; };
-		D288CBA81823AF61000D1C3E /* boats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = boats.jpg; path = "final screens/boats.jpg"; sourceTree = "<group>"; };
-		D288CBA91823AF61000D1C3E /* booking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = booking.jpg; path = "final screens/booking.jpg"; sourceTree = "<group>"; };
-		D288CBAA1823AF61000D1C3E /* day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = day.jpg; path = "final screens/day.jpg"; sourceTree = "<group>"; };
-		D288CBAB1823AF61000D1C3E /* days.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = days.jpg; path = "final screens/days.jpg"; sourceTree = "<group>"; };
-		D288CBAC1823AF61000D1C3E /* explaination.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = explaination.psd; path = "final screens/explaination.psd"; sourceTree = "<group>"; };
-		D288CBAD1823AF61000D1C3E /* homepage retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "homepage retina.jpg"; path = "final screens/homepage retina.jpg"; sourceTree = "<group>"; };
-		D288CBAE1823AF61000D1C3E /* homepage retina1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "homepage retina1.jpg"; path = "final screens/homepage retina1.jpg"; sourceTree = "<group>"; };
-		D288CBAF1823AF61000D1C3E /* homepage with menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "homepage with menu.jpg"; path = "final screens/homepage with menu.jpg"; sourceTree = "<group>"; };
-		D288CBB01823AF61000D1C3E /* hompage without menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "hompage without menu.jpg"; path = "final screens/hompage without menu.jpg"; sourceTree = "<group>"; };
-		D288CBB21823AF61000D1C3E /* account.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = account.jpg; sourceTree = "<group>"; };
-		D288CBB31823AF61000D1C3E /* Boats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boats.jpg; sourceTree = "<group>"; };
-		D288CBB41823AF61000D1C3E /* Booking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Booking.jpg; sourceTree = "<group>"; };
-		D288CBB51823AF61000D1C3E /* day.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day.jpg; sourceTree = "<group>"; };
-		D288CBB61823AF61000D1C3E /* days.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days.jpg; sourceTree = "<group>"; };
-		D288CBB71823AF61000D1C3E /* home page with menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "home page with menu.jpg"; sourceTree = "<group>"; };
-		D288CBB81823AF61000D1C3E /* home page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "home page.jpg"; sourceTree = "<group>"; };
-		D288CBB91823AF61000D1C3E /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
-		D288CBBA1823AF61000D1C3E /* more info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "more info.jpg"; sourceTree = "<group>"; };
-		D288CBBB1823AF62000D1C3E /* log in.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "log in.jpg"; path = "final screens/log in.jpg"; sourceTree = "<group>"; };
-		D288CBBC1823AF62000D1C3E /* splash iphone4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "splash iphone4.jpg"; path = "final screens/splash iphone4.jpg"; sourceTree = "<group>"; };
-		D288CBBD1823AF62000D1C3E /* splash retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "splash retina.jpg"; path = "final screens/splash retina.jpg"; sourceTree = "<group>"; };
 		D29196DC1833CDBD003F133F /* menu-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-box.png"; path = "../menu-box.png"; sourceTree = "<group>"; };
 		D29196DF1833CE29003F133F /* Account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Account.png; sourceTree = "<group>"; };
 		D29196E01833CE29003F133F /* Account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Account@2x.png"; sourceTree = "<group>"; };
@@ -513,8 +469,8 @@
 		D29FE19B1848B2C200972868 /* long-wave-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "long-wave-icon@2x.png"; sourceTree = "<group>"; };
 		D29FE19E1848BEB600972868 /* homepage-white-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage-white-line@2x.png"; sourceTree = "<group>"; };
 		D29FE1A01848BF4000972868 /* homepage-white-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage-white-line.png"; sourceTree = "<group>"; };
-		D29FE1A21848E3DF00972868 /* Splash@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash@2x.jpg"; sourceTree = "<group>"; };
-		D29FE1A31848E3DF00972868 /* Splash-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash-568h@2x.jpg"; sourceTree = "<group>"; };
+		D29FE1A21848E3DF00972868 /* splash@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash@2x.jpg"; sourceTree = "<group>"; };
+		D29FE1A31848E3DF00972868 /* splash-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-568h@2x.jpg"; sourceTree = "<group>"; };
 		D29FE1AA1848E70C00972868 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D29FE1AB1848E70C00972868 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D29FE1AE1848EE5E00972868 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
@@ -1067,56 +1023,9 @@
 			isa = PBXGroup;
 			children = (
 				D2882FAD17EC7F910054841B /* Images */,
-				D288CB4A1823ADD4000D1C3E /* Final */,
 				D29197031833E506003F133F /* WeatherClips */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		D288CB4A1823ADD4000D1C3E /* Final */ = {
-			isa = PBXGroup;
-			children = (
-				D288CBA51823AF61000D1C3E /* final screens */,
-			);
-			name = Final;
-			sourceTree = "<group>";
-		};
-		D288CBA51823AF61000D1C3E /* final screens */ = {
-			isa = PBXGroup;
-			children = (
-				D288CBA71823AF61000D1C3E /* Account.jpg */,
-				D288CBA81823AF61000D1C3E /* boats.jpg */,
-				D288CBA91823AF61000D1C3E /* booking.jpg */,
-				D288CBAA1823AF61000D1C3E /* day.jpg */,
-				D288CBAB1823AF61000D1C3E /* days.jpg */,
-				D288CBAC1823AF61000D1C3E /* explaination.psd */,
-				D288CBAD1823AF61000D1C3E /* homepage retina.jpg */,
-				D288CBAE1823AF61000D1C3E /* homepage retina1.jpg */,
-				D288CBAF1823AF61000D1C3E /* homepage with menu.jpg */,
-				D288CBB01823AF61000D1C3E /* hompage without menu.jpg */,
-				D288CBB11823AF61000D1C3E /* info */,
-				D288CBBB1823AF62000D1C3E /* log in.jpg */,
-				D288CBBC1823AF62000D1C3E /* splash iphone4.jpg */,
-				D288CBBD1823AF62000D1C3E /* splash retina.jpg */,
-			);
-			path = "final screens";
-			sourceTree = "<group>";
-		};
-		D288CBB11823AF61000D1C3E /* info */ = {
-			isa = PBXGroup;
-			children = (
-				D288CBB21823AF61000D1C3E /* account.jpg */,
-				D288CBB31823AF61000D1C3E /* Boats.jpg */,
-				D288CBB41823AF61000D1C3E /* Booking.jpg */,
-				D288CBB51823AF61000D1C3E /* day.jpg */,
-				D288CBB61823AF61000D1C3E /* days.jpg */,
-				D288CBB71823AF61000D1C3E /* home page with menu.jpg */,
-				D288CBB81823AF61000D1C3E /* home page.jpg */,
-				D288CBB91823AF61000D1C3E /* login.jpg */,
-				D288CBBA1823AF61000D1C3E /* more info.jpg */,
-			);
-			name = info;
-			path = "final screens/info";
 			sourceTree = "<group>";
 		};
 		D29196DE1833CE29003F133F /* menuicons */ = {
@@ -1239,8 +1148,8 @@
 		D2E11D6E18282E5800425906 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D29FE1A21848E3DF00972868 /* Splash@2x.jpg */,
-				D29FE1A31848E3DF00972868 /* Splash-568h@2x.jpg */,
+				D29FE1A21848E3DF00972868 /* splash@2x.jpg */,
+				D29FE1A31848E3DF00972868 /* splash-568h@2x.jpg */,
 				D2E11D6F18282F7200425906 /* hompage picture retina size.png */,
 				D2E11D7018282F7200425906 /* hompage-picture-iphone4-size.png */,
 			);
@@ -1291,7 +1200,7 @@
 		D2882F7317EC7EDD0054841B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Ilan Levy";
 				TargetAttributes = {
 					D2882F7A17EC7EDD0054841B = {
@@ -1327,20 +1236,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2882F8917EC7EDD0054841B /* InfoPlist.strings in Resources */,
+				D2E5667419D55E0200C5245C /* InfoPlist.strings in Resources */,
 				D29196EC1833CE29003F133F /* Account.png in Resources */,
 				D29196F41833CE29003F133F /* facebook.png in Resources */,
 				D2882F9517EC7EDD0054841B /* Default-568h@2x.png in Resources */,
 				D29FE1941848AD0C00972868 /* water-temp.png in Resources */,
 				D29FE1831848ACCE00972868 /* home-page-replace-button.png in Resources */,
-				D288CC1C1823AF62000D1C3E /* homepage retina.jpg in Resources */,
 				D27B9E811870AA5F00E4C0B4 /* Boats-Page-Kayak-Icon@2x.png in Resources */,
 				D27B9E831870AA5F00E4C0B4 /* Boats-Page-Surfski-Icon@2x.png in Resources */,
-				D288CC1B1823AF62000D1C3E /* explaination.psd in Resources */,
 				D29FE19D1848B2C200972868 /* long-wave-icon@2x.png in Resources */,
 				D29196F71833CE29003F133F /* open-gate@2x.png in Resources */,
 				D29197371833FEDA003F133F /* Stormy.png in Resources */,
-				D288CC221823AF62000D1C3E /* Booking.jpg in Resources */,
 				D2B90A83187332920005DA22 /* 2.png in Resources */,
 				D29FE1CE184A504800972868 /* Day-page-unchosed-Kayak-button.png in Resources */,
 				D29FE1CA184A504800972868 /* Day-page-chosed-Kayak-button.png in Resources */,
@@ -1350,10 +1256,7 @@
 				D288CB481823AD84000D1C3E /* UI.xcassets in Resources */,
 				D29FE1821848ACCE00972868 /* home-page-Kayak-icon@2x.png in Resources */,
 				D2882FD817EC7FE00054841B /* MainStoryboard.storyboard in Resources */,
-				D288CC1D1823AF62000D1C3E /* homepage retina1.jpg in Resources */,
-				D288CC181823AF62000D1C3E /* booking.jpg in Resources */,
 				D2B90A8C187332920005DA22 /* surfski-selected@2x.png in Resources */,
-				D288CC241823AF62000D1C3E /* days.jpg in Resources */,
 				D2756A5717EDC9B20093A991 /* drc.sqlite in Resources */,
 				D24EB7DE180966EA00CE568D /* switch.png in Resources */,
 				D29196F81833CE29003F133F /* Thumbs.db in Resources */,
@@ -1367,14 +1270,11 @@
 				D29FE1B21848EE7500972868 /* TitleView.xib in Resources */,
 				D29C53EB1810298D0037FFE8 /* Menu.xib in Resources */,
 				D29196F11833CE29003F133F /* booking-copy@2x.png in Resources */,
-				D288CC231823AF62000D1C3E /* day.jpg in Resources */,
 				D29FE1CB184A504800972868 /* Day-page-chosed-Kayak-button@2x.png in Resources */,
 				D253F4351813D98F00E3DD0C /* notes in Resources */,
 				D291973A1833FEDA003F133F /* Rainy@2x.png in Resources */,
 				D253F4391813DCB700E3DD0C /* BoatCell.xib in Resources */,
 				D29FE19F1848BEB600972868 /* homepage-white-line@2x.png in Resources */,
-				D288CC171823AF62000D1C3E /* boats.jpg in Resources */,
-				D288CC211823AF62000D1C3E /* Boats.jpg in Resources */,
 				D29196ED1833CE29003F133F /* Account@2x.png in Resources */,
 				D29FE1801848ACCD00972868 /* home-page-Compass-arrow@2x.png in Resources */,
 				D29FE1951848AD0C00972868 /* water-temp@2x.png in Resources */,
@@ -1382,12 +1282,9 @@
 				D29196EF1833CE29003F133F /* boats-i-like@2x.png in Resources */,
 				D29FE1AC1848E70C00972868 /* Default.png in Resources */,
 				D29FE17F1848ACCD00972868 /* home-page-Compass-arrow.png in Resources */,
-				D288CC251823AF62000D1C3E /* home page with menu.jpg in Resources */,
 				D29FE1851848ACCE00972868 /* home-page-surf-ski-icon-.png in Resources */,
 				D29FE1A11848BF4100972868 /* homepage-white-line.png in Resources */,
-				D288CC1E1823AF62000D1C3E /* homepage with menu.jpg in Resources */,
 				D29FE1CF184A504800972868 /* Day-page-unchosed-Kayak-button@2x.png in Resources */,
-				D288CC191823AF62000D1C3E /* day.jpg in Resources */,
 				D29FE1B51849EA8B00972868 /* DayCell.xib in Resources */,
 				D2B90A84187332920005DA22 /* 2@2x.png in Resources */,
 				D253F45C1815325300E3DD0C /* LogoutCell.xib in Resources */,
@@ -1399,20 +1296,16 @@
 				D2B90A89187332920005DA22 /* plus.png in Resources */,
 				D29196F21833CE29003F133F /* days.png in Resources */,
 				D20005E3187448C2007AD494 /* Booking-page-Cancel-Button@2x.png in Resources */,
-				D288CC281823AF62000D1C3E /* more info.jpg in Resources */,
-				D288CC201823AF62000D1C3E /* account.jpg in Resources */,
 				D253F4631815452500E3DD0C /* redButton@2x.png in Resources */,
 				D2E3553318167E4D007E0EBA /* memo.m4a in Resources */,
 				D29FE1C1184A4DD200972868 /* DayView.xib in Resources */,
 				D2E3553518169DC4007E0EBA /* budda.mp3 in Resources */,
 				D291973C1833FEDA003F133F /* Cloudy@2x.png in Resources */,
-				D288CC1F1823AF62000D1C3E /* hompage without menu.jpg in Resources */,
-				D29FE1A41848E3DF00972868 /* Splash@2x.jpg in Resources */,
+				D29FE1A41848E3DF00972868 /* splash@2x.jpg in Resources */,
 				D2B90A86187332920005DA22 /* 3@2x.png in Resources */,
-				D29FE1A51848E3DF00972868 /* Splash-568h@2x.jpg in Resources */,
+				D29FE1A51848E3DF00972868 /* splash-568h@2x.jpg in Resources */,
 				D204F37F18182AE900B2E8E5 /* Roboto-Black.ttf in Resources */,
 				D29FE1811848ACCD00972868 /* home-page-Kayak-icon.png in Resources */,
-				D288CC1A1823AF62000D1C3E /* days.jpg in Resources */,
 				D29196FA1833D4CA003F133F /* WeatherView.xib in Resources */,
 				D2B90A87187332920005DA22 /* kayak-selected.png in Resources */,
 				D204F38018182AE900B2E8E5 /* Roboto-BlackItalic.ttf in Resources */,
@@ -1426,7 +1319,6 @@
 				D204F38118182AE900B2E8E5 /* Roboto-BoldItalic.ttf in Resources */,
 				D204F38218182AE900B2E8E5 /* Roboto-MediumItalic.ttf in Resources */,
 				D29197381833FEDA003F133F /* Snowy@2x.png in Resources */,
-				D288CC261823AF62000D1C3E /* home page.jpg in Resources */,
 				D27B9E801870AA5F00E4C0B4 /* Boats-Page-Kayak-Icon.png in Resources */,
 				D204F38318182AE900B2E8E5 /* Roboto-Bold.ttf in Resources */,
 				D2B90A88187332920005DA22 /* kayak-selected@2x.png in Resources */,
@@ -1447,7 +1339,6 @@
 				D29FE17D1848ACCD00972868 /* home-page-Cancel-button.png in Resources */,
 				D20005E1187448C2007AD494 /* Booking-page-Approve-button@2x.png in Resources */,
 				D29FE1861848ACCE00972868 /* home-page-surf-ski-icon-@2x.png in Resources */,
-				D288CC2A1823AF62000D1C3E /* splash iphone4.jpg in Resources */,
 				D29FE18C1848ACE500972868 /* period-swell-wave-icon.png in Resources */,
 				D29196F51833CE29003F133F /* facebook@2x.png in Resources */,
 				D2C8AD9C1875A8B600453194 /* log-out-btn.png in Resources */,
@@ -1455,15 +1346,11 @@
 				D29FE1991848AD0C00972868 /* wind-icon@2x.png in Resources */,
 				D204F38818182AE900B2E8E5 /* Roboto-Light.ttf in Resources */,
 				D29FE1D0184A504800972868 /* Day-page-unchosed-surfski-button.png in Resources */,
-				D288CC161823AF62000D1C3E /* Account.jpg in Resources */,
 				D2B90A85187332920005DA22 /* 3.png in Resources */,
 				D29FE1961848AD0C00972868 /* wave-hight-icon.png in Resources */,
 				D204F38918182AE900B2E8E5 /* Roboto-LightItalic.ttf in Resources */,
 				D2B90A8B187332920005DA22 /* surfski-selected.png in Resources */,
-				D288CC291823AF62000D1C3E /* log in.jpg in Resources */,
 				D204F38A18182AE900B2E8E5 /* Roboto-Medium.ttf in Resources */,
-				D288CC2B1823AF62000D1C3E /* splash retina.jpg in Resources */,
-				D288CC271823AF62000D1C3E /* login.jpg in Resources */,
 				D204F38B18182AE900B2E8E5 /* Roboto-Condensed.ttf in Resources */,
 				D204F38C18182AE900B2E8E5 /* Roboto-Regular.ttf in Resources */,
 				D29FE1881848ACCE00972868 /* homepage-Compass-circle@2x.png in Resources */,
@@ -1597,10 +1484,14 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Kayapp;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -1617,15 +1508,18 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = Kayapp;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1647,7 +1541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KayApp/Kayapp-Prefix.pch";
 				INFOPLIST_FILE = "KayApp/Kayapp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = Kayapp;
@@ -1674,7 +1568,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KayApp/Kayapp-Prefix.pch";
 				INFOPLIST_FILE = "KayApp/Kayapp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = Kayapp;
@@ -1695,7 +1589,7 @@
 				D2882F9D17EC7EDD0054841B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D2882F9E17EC7EDD0054841B /* Build configuration list for PBXNativeTarget "Kayapp" */ = {
 			isa = XCConfigurationList;
@@ -1704,7 +1598,7 @@
 				D2882FA017EC7EDD0054841B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

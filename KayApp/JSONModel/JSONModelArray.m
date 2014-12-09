@@ -1,11 +1,11 @@
 //
 //  JSONModelArray.m
 //
-//  @version 0.9.2
+//  @version 1.0.0
 //  @author Marin Todorov, http://www.touch-code-magazine.com
 //
 
-// Copyright (c) 2012-2013 Marin Todorov, Underplot ltd.
+// Copyright (c) 2012-2014 Marin Todorov, Underplot ltd.
 // This code is distributed under the terms and conditions of the MIT license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -34,22 +34,47 @@
     return self;
 }
 
--(id)objectAtIndex:(NSUInteger)index
+- (id)firstObject
 {
-    id obj = _storage[index];
-    if (![obj isMemberOfClass:_targetClass]) {
+    return [self objectAtIndex:0];
+}
+
+- (id)lastObject
+{
+    return [self objectAtIndex:_storage.count - 1];
+}
+
+- (id)objectAtIndex:(NSUInteger)index
+{
+	return [self objectAtIndexedSubscript:index];
+}
+
+- (id)objectAtIndexedSubscript:(NSUInteger)index
+{
+    id object = _storage[index];
+    if (![object isMemberOfClass:_targetClass]) {
         NSError* err = nil;
-        obj = [[_targetClass alloc] initWithDictionary:obj error:&err];
-        if (obj) {
-            _storage[index] = obj;
+        object = [[_targetClass alloc] initWithDictionary:object error:&err];
+        if (object) {
+            _storage[index] = object;
         }
     }
-    return obj;
+    return object;
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
     [anInvocation invokeWithTarget:_storage];
+}
+
+-(id)forwardingTargetForSelector:(SEL)selector
+{
+    static NSArray* overridenMethods = nil;
+    if (!overridenMethods) overridenMethods = @[@"initWithArray:modelClass:",@"objectAtIndex:",@"objectAtIndexedSubscript:", @"count",@"modelWithIndexValue:",@"description",@"mutableCopy",@"firstObject",@"lastObject"];
+    if ([overridenMethods containsObject:NSStringFromSelector(selector)]) {
+        return self;
+    }
+    return _storage;
 }
 
 - (NSUInteger)count
@@ -60,9 +85,9 @@
 -(id)modelWithIndexValue:(id)indexValue
 {
     if (self.count==0) return nil;
-    if (![self[0] indexPropertyName]) return nil;
+    if (![_storage[0] indexPropertyName]) return nil;
     
-    for (JSONModel* model in self) {
+    for (JSONModel* model in _storage) {
         if ([[model valueForKey:model.indexPropertyName] isEqual:indexValue]) {
             return model;
         }
@@ -71,11 +96,17 @@
     return nil;
 }
 
+-(id)mutableCopy
+{
+    //it's already mutable
+    return self;
+}
+
 #pragma mark - description
 -(NSString*)description
 {
     NSMutableString* res = [NSMutableString stringWithFormat:@"<JSONModelArray[%@]>\n", [_targetClass description]];
-    for (id m in self) {
+    for (id m in _storage) {
         [res appendString: [m description]];
         [res appendString: @",\n"];
     }

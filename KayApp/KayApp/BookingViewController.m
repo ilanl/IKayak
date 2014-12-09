@@ -91,7 +91,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 

@@ -1,11 +1,11 @@
 //
 //  JSONModel+networking.m
 //
-//  @version 0.9.2
+//  @version 1.0.0
 //  @author Marin Todorov, http://www.touch-code-magazine.com
 //
 
-// Copyright (c) 2012-2013 Marin Todorov, Underplot ltd.
+// Copyright (c) 2012-2014 Marin Todorov, Underplot ltd.
 // This code is distributed under the terms and conditions of the MIT license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -33,12 +33,12 @@ BOOL _isLoading;
     _isLoading = isLoading;
 }
 
--(id)initFromURLWithString:(NSString *)urlString completion:(JSONModelBlock)completeBlock
+-(instancetype)initFromURLWithString:(NSString *)urlString completion:(JSONModelBlock)completeBlock
 {
-    self = [super init];
+    id placeholder = [super init];
     __block id blockSelf = self;
     
-    if (self) {
+    if (placeholder) {
         //initialization
         self.isLoading = YES;
         
@@ -58,7 +58,52 @@ BOOL _isLoading;
                                           
                                       }];
     }
-    return self;
+    return placeholder;
+}
+
++ (void)getModelFromURLWithString:(NSString*)urlString completion:(JSONModelBlock)completeBlock
+{
+	[JSONHTTPClient getJSONFromURLWithString:urlString
+								  completion:^(NSDictionary* jsonDict, JSONModelError* err)
+	{
+		JSONModel* model = nil;
+
+		if(err == nil)
+		{
+			model = [[self alloc] initWithDictionary:jsonDict error:&err];
+		}
+
+		if(completeBlock != nil)
+		{
+			dispatch_async(dispatch_get_main_queue(), ^
+			{
+				completeBlock(model, err);
+			});
+		}
+    }];
+}
+
++ (void)postModel:(JSONModel*)post toURLWithString:(NSString*)urlString completion:(JSONModelBlock)completeBlock
+{
+	[JSONHTTPClient postJSONFromURLWithString:urlString
+								   bodyString:[post toJSONString]
+								   completion:^(NSDictionary* jsonDict, JSONModelError* err)
+	{
+		JSONModel* model = nil;
+
+		if(err == nil)
+		{
+			model = [[self alloc] initWithDictionary:jsonDict error:&err];
+		}
+
+		if(completeBlock != nil)
+		{
+			dispatch_async(dispatch_get_main_queue(), ^
+			{
+				completeBlock(model, err);
+			});
+		}
+	}];
 }
 
 @end

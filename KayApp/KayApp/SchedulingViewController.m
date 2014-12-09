@@ -18,7 +18,7 @@
 @implementation SchedulingViewController
 @synthesize daysOfWeek;
 @synthesize dayPrefs;
-
+float dayCellHeight;
 
 - (void)viewDidLoad
 {
@@ -35,11 +35,22 @@
     [iv sizeToFit];
     
     self.navigationItem.titleView = iv;
+    
+    self.table.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    dayCellHeight = (screenHeight-self.navigationController.navigationBar.frame.size.height-12)/ 7;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     NSIndexPath *indexPath = [self.table indexPathForSelectedRow];
     NSString *dayOfWeek = [daysOfWeek objectAtIndex:indexPath.row];
     if ([segue.identifier isEqualToString:@"showDayDetail"])
@@ -52,7 +63,6 @@
         [destViewController initializeViewWithDay:myDay];
         
         self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-
     }
 }
 
@@ -78,20 +88,19 @@
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     cell.lblDay.text = [daysOfWeek objectAtIndex:indexPath.row];
-    
     [cell.lblDay setFont:[UIFont fontWithName:@"Roboto-Regular" size:19.0]];
     cell.lblDay.textColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
-    
     [cell.btnBorder setBackgroundColor:[UIColor colorWithHexString:@"1593DB" withAlpha:1.0]];
     cell.btnLine.backgroundColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
+    cell.parent = self;
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 59.4;
+    return dayCellHeight;
 }
 
 -(DayPref*) getDay:(NSString*) dayOfWeek
@@ -102,7 +111,6 @@
     }
     return [[DayPref alloc] initWithParams:dayOfWeek];
 }
-
 
 - (void)didReceiveMemoryWarning
 {

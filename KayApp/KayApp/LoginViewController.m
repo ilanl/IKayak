@@ -17,6 +17,7 @@
 UIActivityIndicatorView *activityView;
 @synthesize txtUser;
 @synthesize txtPassword;
+@synthesize btnLogin;
 
 NSString* userEncoded;
 NSString* pwdEncoded;

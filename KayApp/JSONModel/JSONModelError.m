@@ -1,11 +1,11 @@
 //
 //  JSONModelError.m
 //
-//  @version 0.9.2
+//  @version 1.0.0
 //  @author Marin Todorov, http://www.touch-code-magazine.com
 //
 
-// Copyright (c) 2012-2013 Marin Todorov, Underplot ltd.
+// Copyright (c) 2012-2014 Marin Todorov, Underplot ltd.
 // This code is distributed under the terms and conditions of the MIT license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -19,14 +19,16 @@
 NSString* const JSONModelErrorDomain = @"JSONModelErrorDomain";
 NSString* const kJSONModelMissingKeys = @"kJSONModelMissingKeys";
 NSString* const kJSONModelTypeMismatch = @"kJSONModelTypeMismatch";
+NSString* const kJSONModelKeyPath = @"kJSONModelKeyPath";
 
 @implementation JSONModelError
 
-+(id)errorInvalidData
++(id)errorInvalidDataWithMessage:(NSString*)message
 {
+	message = [NSString stringWithFormat:@"Invalid JSON data: %@", message];
     return [JSONModelError errorWithDomain:JSONModelErrorDomain
-                                                   code:kJSONModelErrorInvalidData
-                                                userInfo:@{NSLocalizedDescriptionKey:@"Invalid JSON data. Malformed JSON, server response invalid or other reason for invalid input to a JSONModel class."}];
+                                      code:kJSONModelErrorInvalidData
+                                  userInfo:@{NSLocalizedDescriptionKey:message}];
 }
 
 +(id)errorInvalidDataWithMissingKeys:(NSSet *)keys
@@ -71,5 +73,21 @@ NSString* const kJSONModelTypeMismatch = @"kJSONModelTypeMismatch";
                                   userInfo:@{NSLocalizedDescriptionKey:@"Initializing model with nil input object."}];
 }
 
+- (instancetype)errorByPrependingKeyPathComponent:(NSString*)component
+{
+    // Create a mutable  copy of the user info so that we can add to it and update it
+    NSMutableDictionary* userInfo = [self.userInfo mutableCopy];
+
+    // Create or update the key-path
+    NSString* existingPath = userInfo[kJSONModelKeyPath];
+    NSString* separator = [existingPath hasPrefix:@"["] ? @"" : @".";
+    NSString* updatedPath = (existingPath == nil) ? component : [component stringByAppendingFormat:@"%@%@", separator, existingPath];
+    userInfo[kJSONModelKeyPath] = updatedPath;
+
+    // Create the new error
+    return [JSONModelError errorWithDomain:self.domain
+                                      code:self.code
+                                  userInfo:[NSDictionary dictionaryWithDictionary:userInfo]];
+}
 
 @end

@@ -1,11 +1,11 @@
 //
 //  JSONModelError.h
 //
-//  @version 0.9.2
+//  @version 1.0.0
 //  @author Marin Todorov, http://www.touch-code-magazine.com
 //
 
-// Copyright (c) 2012-2013 Marin Todorov, Underplot ltd.
+// Copyright (c) 2012-2014 Marin Todorov, Underplot ltd.
 // This code is distributed under the terms and conditions of the MIT license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -46,6 +46,13 @@ extern NSString* const kJSONModelMissingKeys;
  */
 extern NSString* const kJSONModelTypeMismatch;
 
+/**
+ * If an error occurs in a nested model, check the userInfo dictionary of
+ * the JSONModelError instance you get back - under the kJSONModelKeyPath
+ * key you will find key-path at which the error occurred.
+ */
+extern NSString* const kJSONModelKeyPath;
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Custom NSError subclass with shortcut methods for creating 
@@ -58,7 +65,7 @@ extern NSString* const kJSONModelTypeMismatch;
 /**
  * Creates a JSONModelError instance with code kJSONModelErrorInvalidData = 1
  */
-+(id)errorInvalidData;
++(id)errorInvalidDataWithMessage:(NSString*)message;
 
 /**
  * Creates a JSONModelError instance with code kJSONModelErrorInvalidData = 1
@@ -91,6 +98,15 @@ extern NSString* const kJSONModelTypeMismatch;
  * Creates a JSONModelError instance with code kJSONModelErrorNilInput = 5
  */
 +(id)errorInputIsNil;
+
+/**
+ * Creates a new JSONModelError with the same values plus information about the key-path of the error.
+ * Properties in the new error object are the same as those from the receiver,
+ * except that a new key kJSONModelKeyPath is added to the userInfo dictionary.
+ * This key contains the component string parameter. If the key is already present
+ * then the new error object has the component string prepended to the existing value.
+ */
+- (instancetype)errorByPrependingKeyPathComponent:(NSString*)component;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 @end

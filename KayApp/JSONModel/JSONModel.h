@@ -1,11 +1,11 @@
 //
 //  JSONModel.h
 //
-//  @version 0.9.2
+//  @version 1.0.0
 //  @author Marin Todorov, http://www.touch-code-magazine.com
 //
 
-// Copyright (c) 2012-2013 Marin Todorov, Underplot ltd.
+// Copyright (c) 2012-2014 Marin Todorov, Underplot ltd.
 // This code is distributed under the terms and conditions of the MIT license.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -30,7 +30,17 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 #pragma mark - Property Protocols
-/** 
+/**
+ * Protocol for defining properties in a JSON Model class that should not be considered at all
+ * neither while importing nor when exporting JSON.
+ *
+ * @property (strong, nonatomic) NSString&lt;Ignore&gt;* propertyName;
+ *
+ */
+@protocol Ignore
+@end
+
+/**
  * Protocol for defining optional properties in a JSON Model class. Use like below to define 
  * model properties that are not required to have values in the JSON input:
  * 
@@ -53,7 +63,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 /**
  * Make all objects Optional compatible to avoid compiler warnings
  */
-@interface NSObject(JSONModelPropertyCompatibility)<Optional, Index>
+@interface NSObject(JSONModelPropertyCompatibility)<Optional, Index, Ignore>
 @end
 
 /**
@@ -76,7 +86,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
  * A protocol describing an abstract JSONModel class
  * JSONModel conforms to this protocol, so it can use itself abstractly
  */
-@protocol AbstractJSONModelProtocol <NSObject>
+@protocol AbstractJSONModelProtocol <NSObject, NSCopying, NSCoding>
 
 @required
   /**
@@ -90,19 +100,40 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
    */
   -(instancetype)initWithDictionary:(NSDictionary*)dict error:(NSError**)err;
 
+
+/**
+ * All JSONModel classes should implement initWithData:error:
+ *
+ * For most classes the default initWithData: inherited from JSONModel itself
+ * should suffice, but developers have the option ot also overwrite it if needed.
+ *
+ * @param data representing a JSON response (usually fetched from web), to be imported in the model.
+ * @param err an error or NULL
+ */
+-(instancetype)initWithData:(NSData*)data error:(NSError**)error;
+
+/**
+ * All JSONModel classes should be able to export themselves as a dictionary of
+ * JSON compliant objects.
+ *
+ * For most classes the inherited from JSONModel default toDictionary implementation
+ * should suffice.
+ *
+ * @return NSDictionary dictionary of JSON compliant objects
+ * @exception JSONModelTypeNotAllowedException thrown when one of your model's custom class properties
+ * does not have matching transformer method in an JSONValueTransformer.
+ */
+  -(NSDictionary*)toDictionary;
+
   /**
-   * All JSONModel classes should be able to export themselves as a dictioanry of
-   * JSON compliant objects. 
+   * Export a model class to a dictionary, including only given properties
    *
-   * For most classes the inherited from JSONModel default toDictionary implementation
-   * should suffice.
-   *
+   * @param propertyNames the properties to export; if nil, all properties exported
    * @return NSDictionary dictionary of JSON compliant objects
    * @exception JSONModelTypeNotAllowedException thrown when one of your model's custom class properties 
    * does not have matching transformer method in an JSONValueTransformer.
-   * @see JSONValueTransformer JSONObjectFromNSURL: for an example how to export custom class property to a JSON compliant object
    */
-  -(NSDictionary*)toDictionary;
+  -(NSDictionary*)toDictionaryWithKeys:(NSArray*)propertyNames;
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,7 +144,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
  * Instead you should subclass it, and define the properties you want your data model
  * to have as properties of your own class.
  */
-@interface JSONModel : NSObject <AbstractJSONModelProtocol>
+@interface JSONModel : NSObject <AbstractJSONModelProtocol, NSSecureCoding>
 
 /** @name Creating and initializing models */
 
@@ -139,8 +170,14 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
   -(instancetype)initWithDictionary:(NSDictionary*)dict error:(NSError **)err;
 
+  -(instancetype)initWithData:(NSData *)data error:(NSError **)error;
+
 /** @name Exporting model contents */
 
+  /**
+   * Export the whole object to a dictionary
+   * @return dictionary containing the data model
+   */
   -(NSDictionary*)toDictionary;
 
   /**
@@ -148,6 +185,20 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
    * @return JSON text describing the data model
    */
   -(NSString*)toJSONString;
+
+  /**
+   * Export the specified properties of the object to a dictionary
+   * @param propertyNames the properties to export; if nil, all properties exported
+   * @return dictionary containing the data model
+   */
+  -(NSDictionary*)toDictionaryWithKeys:(NSArray*)propertyNames;
+
+  /**
+   * Export the specified properties of the object to a JSON data text string
+   * @param propertyNames the properties to export; if nil, all properties exported
+   * @return JSON text describing the data model
+   */
+  -(NSString*)toJSONStringWithKeys:(NSArray*)propertyNames;
 
 /** @name Batch methods */
 
@@ -165,6 +216,10 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
    */
   +(NSMutableArray*)arrayOfModelsFromDictionaries:(NSArray*)array;
 
+  +(NSMutableArray*)arrayOfModelsFromDictionaries:(NSArray*)array error:(NSError**)err;
+
+  +(NSMutableArray*)arrayOfModelsFromData:(NSData*)data error:(NSError**)err;
+
   /**
    * If you have an NSArray of data model objects, this method takes it in and outputs a list of the 
    * matching dictionaries. This method does the opposite of arrayOfObjectsFromDictionaries:
@@ -175,6 +230,8 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
    * @see arrayOfModelsFromDictionaries:
    */
   +(NSMutableArray*)arrayOfDictionariesFromModels:(NSArray*)array;
+
+
 
 /** @name Comparing models */
 
@@ -238,10 +295,27 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 /**
  * Indicates whether the property with the given name is Optional.
  * To have a model with all of its properties being Optional just return YES.
- * This method returns by default NO, since the default behaviour is to have all propertoes required.
+ * This method returns by default NO, since the default behaviour is to have all properties required.
  * @param propertyName the name of the property
  * @return a BOOL result indicating whether the property is optional
  */
 +(BOOL)propertyIsOptional:(NSString*)propertyName;
+
+/**
+ * Indicates whether the property with the given name is Ignored.
+ * To have a model with all of its properties being Ignored just return YES.
+ * This method returns by default NO, since the default behaviour is to have all properties required.
+ * @param propertyName the name of the property
+ * @return a BOOL result indicating whether the property is ignored
+ */
++(BOOL)propertyIsIgnored:(NSString*)propertyName;
+
+/**
+ * Merges values from the given dictionary into the model instance.
+ * @param dict dictionary with values
+ * @param useKeyMapping if YES the method will use the model's key mapper and the global key mapper, if NO 
+ * it'll just try to match the dictionary keys to the model's properties
+ */
+-(void)mergeFromDictionary:(NSDictionary*)dict useKeyMapping:(BOOL)useKeyMapping;
 
 @end

@@ -24,11 +24,14 @@
 
 @synthesize boats;
 
+static NSString *boatCellIdentifier = @"BoatCell";
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.navigationItem.backBarButtonItem.title = @" ";
     }
     return self;
 }
@@ -39,18 +42,16 @@
     // Initialize table data
     priorities = [NSArray arrayWithObjects:@"plus.png",@"3.png",@"2.png",@"1.png", nil];
     
-    
-
-
+    self.table.rowHeight = 60;
+    self.table.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -61,9 +62,7 @@
 {
     BoatPref *selectedBoatPref = [boats objectAtIndex:indexPath.row];
     
-    static NSString *simpleTableIdentifier = @"BoatCell";
-    
-    BoatCell *cell = (BoatCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    BoatCell *cell = (BoatCell *)[tableView dequeueReusableCellWithIdentifier:boatCellIdentifier];
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BoatCell" owner:self options:nil];
@@ -85,14 +84,8 @@
     cell.lblBoat.textColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
     
     [cell.btnBorder setBackgroundColor:[UIColor colorWithHexString:@"1593DB" withAlpha:1.0]];
-    cell.btnLine.backgroundColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
-    return cell;
     
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 59.4;
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning

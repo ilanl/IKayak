@@ -16,6 +16,7 @@
 - (IBAction)openBoatsPressed:(id)sender;
 - (IBAction)openBookingsPressed:(id)sender;
 - (IBAction)openSettingsPressed:(id)sender;
+- (IBAction)openFacebookPressed:(id)sender;
 
 @property (nonatomic, retain) UIViewController *parent;
 

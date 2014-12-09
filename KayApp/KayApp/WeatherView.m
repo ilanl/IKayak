@@ -47,6 +47,8 @@ NSArray *arr;
     NSString *imgName = [ [[NSBundle mainBundle] objectForInfoDictionaryKey: f.Weather] stringByAppendingString:@".png"];
     
     imgWeather.image = [UIImage imageNamed: imgName];
+    imgWeather.alpha = 1.0f;
+    
     lblTemp.text = [[NSString alloc]initWithFormat:@"%@°",f.TempC];
     [lblTemp setFont:[UIFont fontWithName:@"Roboto-Light" size:26.5]];
     
@@ -65,22 +67,17 @@ NSArray *arr;
     lblSwellSecs.text = [[NSString alloc]initWithFormat:@"%@",f.SwellSecs];
     [lblSwellSecs setFont:[UIFont fontWithName:@"Roboto-Regular" size:22]];
     
-    
     NSArray *items = @[@"N", @"NNE", @"NE", @"ENE",@"E",@"ESE",@"SE",@"SSE",@"S",@"SSW",@"SW",@"WSW",@"W",@"WNW",@"NW",@"NNW"];
     
-    int windOrientationIndex = [items indexOfObject:f.WindDir];
+    long windOrientationIndex = [items indexOfObject:f.WindDir];
     imgCompassArrow.transform =
     CGAffineTransformMakeRotation(DEGREES_TO_RADIANS((windOrientationIndex) * 360/16));
-        
     
     TitleView *iv = [[TitleView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     [iv setTitle:f.Day withTime:f.Hour];
     iv.contentMode = UIViewContentModeCenter;
-    [iv sizeToFit];
+    //[iv sizeToFit];
     self.parent.navigationItem.titleView = iv;
-    
 }
-
-
 
 @end
