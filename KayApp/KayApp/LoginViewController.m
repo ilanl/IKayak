@@ -78,6 +78,8 @@ NSString* pwdEncoded;
                                                                                                         kCFStringEncodingUTF8 ));
     
    [self downloadAll:userEncoded withPassword:pwdEncoded withActivityIndicator:activityView withController:self];
+    
+    
 }
 
 @end
