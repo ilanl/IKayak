@@ -41,6 +41,5 @@
     lblHour.text = hour;
     
     NSLog(@"day: %@ hour: %@", day, hour);
-    
 }
 @end

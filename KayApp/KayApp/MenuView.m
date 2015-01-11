@@ -25,9 +25,6 @@ static NSString *phoneNumber = NULL;
         self = [nib objectAtIndex:0];
         
         self.frame = CGRectMake(0,230, self.bounds.size.width-10, self.bounds.size.height);
-        //imgBox.image = [UIImage imageNamed:@"MenuBox"];
-        // load the sub view from another NIB
-        //self.backgroundColor = [UIColor redColor];
         
         phoneNumber = [@"tel://" stringByAppendingString:
          [[NSBundle mainBundle] objectForInfoDictionaryKey:@"tel_gate"]];
@@ -44,6 +41,13 @@ static NSString *phoneNumber = NULL;
     return self;
 }
 
+- (IBAction)openFacebookPressed:(id)sender{
+    NSURL *url = [NSURL URLWithString:[@"https://www.facebook.com/drc.org.il"
+                                       stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    [[UIApplication sharedApplication] openURL: url];
+}
+
 - (IBAction)openGatePressed:(id)sender {
     
     NSLog(@"calling gate tel:");
@@ -53,6 +57,7 @@ static NSString *phoneNumber = NULL;
 }
 
 - (IBAction)openDaysPressed:(id)sender {
+    
     [parent performSegueWithIdentifier:@"goToSchedulings" sender:parent];
 }
 

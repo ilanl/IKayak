@@ -22,7 +22,7 @@
 @synthesize mainTable;
 NSIndexPath* checkedStatusIndexPath;
 NSIndexPath* checkedReminderIndexPath;
-static NSString *simpleTableIdentifier = @"LogoutCell";
+static NSString *logoutCellIdentifier = @"LogoutCell";
 static NSString *settingCellIdentifier = @"SettingCell";
 
 NSInteger sectionOfTheCell, rowOfTheCell;
@@ -76,7 +76,12 @@ NSInteger sectionOfTheCell, rowOfTheCell;
     return [dataArray count] + 1;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section { return 44.0;
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 1)
+        return 70.0;
+    
+    return 44.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -85,14 +90,14 @@ NSInteger sectionOfTheCell, rowOfTheCell;
         return nil;
     
     // create the parent view that will hold header Label
-    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 44.0)];
+    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 60.0)];
     
     // create the button object
     UILabel * footerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     footerLabel.opaque = NO;
     footerLabel.textColor = [UIColor whiteColor];
-    footerLabel.font =[UIFont fontWithName:@"Roboto-Light" size:13.0];
-    footerLabel.frame = CGRectMake(10.0, 0.0, 300.0, 40.0);
+    footerLabel.font =[UIFont fontWithName:@"Roboto-Thin" size:13.0];
+    footerLabel.frame = CGRectMake(10.0, 0.0, 300.0, 44.0);
     footerLabel.lineBreakMode = NSLineBreakByWordWrapping;
     footerLabel.numberOfLines = 3;
     
@@ -107,13 +112,13 @@ NSInteger sectionOfTheCell, rowOfTheCell;
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     // create the parent view that will hold header Label
-    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 60.0)];
+    UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 50.0)];
     
     // create the button object
-    UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel * headerLabel = [[UILabel alloc] initWithFrame: CGRectMake(0, 5, 140, 50)];
     headerLabel.opaque = NO;
     headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.font =[UIFont fontWithName:@"Roboto-Medium" size:19.0];
+    headerLabel.font =[UIFont fontWithName:@"Roboto-Regular" size:18.0];
     headerLabel.frame = CGRectMake(10.0, 0.0, 300.0, 44.0);
     
     // If you want to align the header text as centered
@@ -121,8 +126,10 @@ NSInteger sectionOfTheCell, rowOfTheCell;
     
     if(section == 0)
 		headerLabel.text = @"Status";
-    else if(section == 1)
+    else if(section == 1){
+        headerLabel.frame = CGRectMake(10.0, 5.0, 320.0, 90.0);
 		headerLabel.text = @"Set reminder";
+    }
     else
         return nil;
 
@@ -142,128 +149,128 @@ NSInteger sectionOfTheCell, rowOfTheCell;
     return [array count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
+-(SettingCell *) drawSettingCell: (NSIndexPath *)indexPath withTable: (UITableView *) tableView
+{
     User *user = [[DbAdapter getInstance] currentUser];
     
-    if ([Util isiOSVerGreaterThen7]) { // iOS 7
-        //UIView *contentView = (UIView *)[mainTable superview];
-        //UITableViewCell *cell = (UITableViewCell *)[contentView superview];
-        //UITableView *tableView = (UITableView *)cell.superview.superview;
-        //NSIndexPath *indexPath = [tableView indexPathForCell:cell];
+    SettingCell *cell = (SettingCell *)[tableView dequeueReusableCellWithIdentifier:settingCellIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SettingCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
         
-        sectionOfTheCell = [indexPath section];
-        rowOfTheCell = [indexPath row];
-    }
-    else { // iOS 6
-        UITableViewCell *cell = (UITableViewCell *)[mainTable superview];
-        UITableView *table = (UITableView *)[cell superview];
-        NSIndexPath *pathOfTheCell = [table indexPathForCell:cell];
-        sectionOfTheCell = [pathOfTheCell section];
-        rowOfTheCell = [pathOfTheCell row];
+        NSDictionary *dictionary = [dataArray objectAtIndex:sectionOfTheCell];
+        NSArray *array = [dictionary objectForKey:@"data"];
+        NSString *cellValue = [array objectAtIndex:rowOfTheCell];
+        cell.lblName.text = cellValue;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIButton *button = cell.btnState;
+        [button addTarget:self action:@selector(checkButtonTapped:event:) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     
-    sectionOfTheCell = indexPath.section;
-    rowOfTheCell = indexPath.row;
+    if (sectionOfTheCell == 0){
+        
+        if (rowOfTheCell == 0 && user.state == 0)
+        {
+            [cell updateMark: TRUE];
+            checkedStatusIndexPath = indexPath;
+        }
+        else if (rowOfTheCell == 1 && user.state == 1)
+        {
+            [cell updateMark: TRUE];
+            checkedStatusIndexPath = indexPath;
+        }
+        else{
+            [cell updateMark: FALSE];
+        }
+    }
     
-    if (sectionOfTheCell == 0 || sectionOfTheCell == 1)
-    {
-        SettingCell *cell = (SettingCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    else if (sectionOfTheCell == 1){
         
-        if (cell == nil)
+        int reminder = user.reminder;
+        if (rowOfTheCell == 0 && reminder == 0)
         {
-            if ([[[cell class] description] isEqualToString:@"LogoutCell"])
-                return nil;
-            
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SettingCell" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-            
-            NSDictionary *dictionary = [dataArray objectAtIndex:sectionOfTheCell];
-            NSArray *array = [dictionary objectForKey:@"data"];
-            NSString *cellValue = [array objectAtIndex:rowOfTheCell];
-            cell.lblName.text = cellValue;
-            
-            UIButton *button = cell.btnState;
-            [button addTarget:self action:@selector(checkButtonTapped:event:) forControlEvents:UIControlEventTouchUpInside];
-            
+            [cell updateMark: TRUE];
+            checkedReminderIndexPath = indexPath;
         }
-        
-        if (sectionOfTheCell == 0){
-            
-            if (rowOfTheCell == 0 && user.state == 0)
-            {
-                [cell updateMark: TRUE];
-                checkedStatusIndexPath = indexPath;
-            }
-            else if (rowOfTheCell == 1 && user.state == 1)
-            {
-                [cell updateMark: TRUE];
-                checkedStatusIndexPath = indexPath;
-            }
-            else{
-                [cell updateMark: FALSE];
-            }
-        }
-        
-        else if (sectionOfTheCell == 1){
-            
-            int reminder = user.reminder;
-            if (rowOfTheCell == 0 && reminder == 0)
-            {
-                [cell updateMark: TRUE];
-                checkedReminderIndexPath = indexPath;
-            }
-            else if (rowOfTheCell == 1 && reminder == 30)
-            {
-                [cell updateMark: TRUE];
-                checkedReminderIndexPath = indexPath;
-            }
-            else if (rowOfTheCell == 2 && reminder == 45)
-            {
-                [cell updateMark: TRUE];
-                checkedReminderIndexPath = indexPath;
-            }
-            else if (rowOfTheCell == 3 && reminder == 60)
-            {
-                [cell updateMark: TRUE];
-                checkedReminderIndexPath = indexPath;
-            }
-            else if (rowOfTheCell == 4 && reminder == 480)
-            {
-                [cell updateMark: TRUE];
-                checkedReminderIndexPath = indexPath;
-            }
-            else{
-                [cell updateMark: FALSE];
-            }
-        }
-        
-        return cell;
-    }
-    else
-    {
-        [AppLog Log:@"draw logout section: %i , row:%i", sectionOfTheCell, rowOfTheCell];
-        
-        LogoutCell *logoutCell = (LogoutCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-        if (logoutCell == nil)
+        else if (rowOfTheCell == 1 && reminder == 30)
         {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LogoutCell" owner:self options:nil];
-            logoutCell = [nib objectAtIndex:0];
-            logoutCell.parent = self;
+            [cell updateMark: TRUE];
+            checkedReminderIndexPath = indexPath;
         }
-        
-        return logoutCell;
+        else if (rowOfTheCell == 2 && reminder == 45)
+        {
+            [cell updateMark: TRUE];
+            checkedReminderIndexPath = indexPath;
+        }
+        else if (rowOfTheCell == 3 && reminder == 60)
+        {
+            [cell updateMark: TRUE];
+            checkedReminderIndexPath = indexPath;
+        }
+        else if (rowOfTheCell == 4 && reminder == 480)
+        {
+            [cell updateMark: TRUE];
+            checkedReminderIndexPath = indexPath;
+        }
+        else {
+            [cell updateMark: FALSE];
+        }
     }
+    
+    return cell;
+
+
 }
+
+-(LogoutCell *) drawLogoutCell: (NSIndexPath *)indexPath withTable: (UITableView *) tableView
+{
+    [AppLog Log:@"draw logout section: %i , row:%i", sectionOfTheCell, rowOfTheCell];
+    
+    LogoutCell *logoutCell = (LogoutCell *)[tableView dequeueReusableCellWithIdentifier:logoutCellIdentifier];
+    if (logoutCell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LogoutCell" owner:self options:nil];
+        logoutCell = [nib objectAtIndex:0];
+    }
+    
+    return logoutCell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    sectionOfTheCell = [indexPath section];
+    rowOfTheCell = [indexPath row];
+    
+    [AppLog Log: [NSString stringWithFormat:@"section: %li row: %li", (long)sectionOfTheCell, (long)rowOfTheCell]];
+    
+    switch (sectionOfTheCell) {
+        case 0:
+        case 1:
+            return [self drawSettingCell: indexPath withTable:tableView];
+            break;
+        case 2:
+            return [self drawLogoutCell: indexPath withTable:tableView];
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     return 50;
+    
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [AppLog Log:@"on selection section: %@ , row:%i", indexPath.section, rowOfTheCell];
     
     if ((indexPath.section == checkedStatusIndexPath.section && indexPath.row == checkedStatusIndexPath.row) || (indexPath.section == checkedReminderIndexPath.section && indexPath.row == checkedReminderIndexPath.row) || indexPath.section == 2)
         return;
@@ -345,7 +352,7 @@ NSInteger sectionOfTheCell, rowOfTheCell;
 - (void)viewDidAppear:(BOOL)animated
 {
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 @end

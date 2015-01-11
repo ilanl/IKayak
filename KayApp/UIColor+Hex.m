@@ -23,9 +23,9 @@
     NSUInteger greenHex = 0;
     NSUInteger blueHex = 0;
     
-    sscanf([[hex substringWithRange:NSMakeRange(0, digits)] UTF8String], "%x", &redHex);
-    sscanf([[hex substringWithRange:NSMakeRange(digits, digits)] UTF8String], "%x", &greenHex);
-    sscanf([[hex substringWithRange:NSMakeRange(2*digits, digits)] UTF8String], "%x", &blueHex);
+    sscanf([[hex substringWithRange:NSMakeRange(0, digits)] UTF8String], "%lx", &redHex);
+    sscanf([[hex substringWithRange:NSMakeRange(digits, digits)] UTF8String], "%lx", &greenHex);
+    sscanf([[hex substringWithRange:NSMakeRange(2*digits, digits)] UTF8String], "%lx", &blueHex);
     
     CGFloat red = redHex/maxValue;
     CGFloat green = greenHex/maxValue;

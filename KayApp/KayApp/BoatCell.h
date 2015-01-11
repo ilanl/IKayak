@@ -13,7 +13,6 @@
 @interface BoatCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblBoat;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnLine;
 @property (weak, nonatomic) IBOutlet UIButton *btnBorder;
 - (IBAction)btnPriorityChanged:(id)sender;
 

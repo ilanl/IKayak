@@ -1,9 +1,9 @@
 //
 //  Pushbots.h
-//  Pushbots framework 1.0.2
+//  Pushbots framework 1.0.5.5
 //
-//  Created by Abdullah Diaa on 10/05/13.
-//  Copyright (c) 2013 PushBots Inc. All rights reserved.
+//  Created by Abdullah Diaa on 23/09/14.
+//  Copyright (c) 2014 PushBots Inc. All rights reserved.
 //
 
 @class Pushbots;
@@ -15,6 +15,10 @@
 +(Pushbots *)getInstance;
 
 /** @name PushBots Options */
+
+- (void) RegisterDeviceToken:(NSData *)deviceToken;
+
+-(NSString *) getDeviceID;
 /*!
  Send device location to PushBots servers.
  @param location: Device location [CLLocation]
@@ -37,6 +41,8 @@
  */
 -(void) tag:(NSString *)tag ;
 -(void) untag:(NSString *)tag ;
+-(void) unregister;
+
 /*!
  Set device Badge count on servers.
  @param count: Custom badge count

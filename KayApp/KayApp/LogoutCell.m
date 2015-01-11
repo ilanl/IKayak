@@ -8,31 +8,25 @@
 
 #import "LogoutCell.h"
 #import "DbAdapter.h"
+#import "UIColor+Hex.h"
 
 @implementation LogoutCell
 @synthesize btnLogout;
 @synthesize parent;
 
--(id) init{
 
-    self = [super init];
-    
-    if (self) {
-        
-        self.backgroundColor = [UIColor clearColor];
-        
-    }
-    [btnLogout setFont:[UIFont fontWithName:@"Roboto-Bold" size:30.0]];
-    
-    return self;
-}
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SettingCell" owner:self options:nil];
+        self = [nib objectAtIndex:0];
     }
+    
+    self.backgroundView.backgroundColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
+    self.backgroundColor = [UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0];
+
     return self;
 }
 

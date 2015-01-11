@@ -12,8 +12,8 @@
 
 @interface BaseResponse : JSONModel
 
-@property (nonatomic, strong)NSString* SecurityToken;
+@property (nonatomic, strong)NSString<Optional>* SecurityToken;
 @property (nonatomic, strong)NSString* Status;
-@property (nonatomic, strong)Error* Error;
+@property (nonatomic, strong)Error<Optional>* Error;
 
 @end

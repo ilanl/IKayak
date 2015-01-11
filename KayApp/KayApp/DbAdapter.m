@@ -178,12 +178,21 @@ static FMDatabaseQueue *_queue;
 
 -(void)saveForecastsToLocal:(ForecastResponse*) response
 {
+    // Assume you have a 'date'
+    NSCalendar *gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComps = [gregorianCal components: (NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+    
     [_queue inTransaction:^(FMDatabase *db, BOOL *rollback)
      {
          [db executeUpdate:@"DELETE FROM Forecast"];
      
          for (Forecast* f in response.Forecasts)
          {
+//             long localHourInt = [dateComps hour];
+//             int hourInt = [[f.Hour substringToIndex:4] intValue];
+//             if (hourInt < localHourInt)
+//                 continue;
+             
              [db executeUpdate:@"INSERT INTO Forecast(Day,Hour,TempC,WaterTempC,WaveH,Weather,SwellSecs,WindDir,WindF) VALUES(?,?,?,?,?,?,?,?,?)",
                  [NSString stringWithFormat:@"%@", f.Day],
                  [NSString stringWithFormat:@"%@", f.Hour],

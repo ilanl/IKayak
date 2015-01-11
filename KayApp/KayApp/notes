@@ -72,5 +72,26 @@ You can see some examples here: http://glyphish.com/
  {
  [AppLog Log:@"error = %@", error, nil];
  }
- 
- 
+
+
+
+[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"kayak-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Boats-Page-Kayak-Icon.png"]];
+[tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"surfski-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"Boats-Page-Surfski-Icon.png"]];
+
+
+UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+
+UIImage *kayakImage = [UIImage imageNamed:@"Boats-Page-Kayak-Icon.png"];
+UIImage *kayakImageSel = [UIImage imageNamed:@"kayak-selected.png"];
+
+tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"" image:kayakImage selectedImage:kayakImageSel];
+
+UIImage *surfImage = [UIImage imageNamed:@"Boats-Page-Surfski-Icon.png"];
+UIImage *surfImageSel = [UIImage imageNamed:@"surfski-selected.png"];
+
+tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"" image:surfImage selectedImage:surfImageSel];
+
+
+
+

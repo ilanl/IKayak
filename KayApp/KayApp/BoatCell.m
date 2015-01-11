@@ -10,7 +10,7 @@
 
 @implementation BoatCell
 
-@synthesize lblBoat, btnBorder, btnLine;
+@synthesize lblBoat, btnBorder;
 @synthesize btnPriority;
 @synthesize selectedBoatPref;
 @synthesize priorities;
@@ -38,5 +38,12 @@
     //save to db
     [[DbAdapter getInstance] updateKayakPriority:selectedBoatPref.key withPriority:selectedBoatPref.priority];
 
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self.contentView layoutIfNeeded];
 }
 @end

@@ -24,4 +24,7 @@
     return self;
 }
 
+- (IBAction)didSelectDay:(id)sender {
+    [self.parent performSegueWithIdentifier:@"showDayDetail" sender:self];
+}
 @end

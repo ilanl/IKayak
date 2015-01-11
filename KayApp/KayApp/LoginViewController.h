@@ -27,6 +27,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *txtUser;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
 
 - (IBAction)LoginClick:(id)sender;
 

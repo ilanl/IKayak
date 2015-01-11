@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Global.h"
-#import "TitleView.h";
+#import "TitleView.h"
 
 @implementation HomeViewController
 {
@@ -34,7 +34,7 @@
     [btnMenu setBackgroundImage:[UIImage imageNamed:@"MenuIcon"] forState:UIControlStateNormal];
     
     imgHome.image = [UIImage imageNamed:@"Home"];
-    [self.navigationItem setHidesBackButton:TRUE];
+    
     [AppLog Log:@"Home:: didLoad"];
     
     [super viewDidLoad];
@@ -43,13 +43,11 @@
     weatherView = [[WeatherView alloc]initWithFrame:rect];
     weatherView.parent = self;
     [self.view addSubview:weatherView];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self loadData];
-    [self.navigationController setNavigationBarHidden:NO];
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -109,7 +107,9 @@
 {
     [super didReceiveMemoryWarning];
 }
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
@@ -152,10 +152,15 @@
     {
         //open menu
         isMenuOpened = YES;
-        CGRect rect = CGRectMake(30, 208, 260, 150);
-        menuView = [[MenuView alloc]initWithFrame:rect];
+        
+        
+        self.menuView = [[MenuView alloc] init];
+        self.menuView.frame = CGRectMake(0, btnMenu.frame.origin.y-menuView.frame.size.height , menuView.frame.size.width, menuView.frame.size.height);
         menuView.parent = self;
-        [self.view addSubview:menuView];
+        [self.view addSubview:self.menuView];
+        
+        
+        
     }
 }
 @end
