@@ -32,7 +32,6 @@
 - (void)viewDidLoad
 {
     [btnMenu setBackgroundImage:[UIImage imageNamed:@"MenuIcon"] forState:UIControlStateNormal];
-    
     imgHome.image = [UIImage imageNamed:@"Home"];
     
     [AppLog Log:@"Home:: didLoad"];
@@ -43,6 +42,11 @@
     weatherView = [[WeatherView alloc]initWithFrame:rect];
     weatherView.parent = self;
     [self.view addSubview:weatherView];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -106,11 +110,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 -(void)setForecastToDisplay:(Forecast *) forecast

@@ -52,40 +52,6 @@ AppDelegate *appContext;
     return YES;
 }
 
-- (void)checkCredentials
-
-{
-    
-    User *user = [[DbAdapter getInstance] currentUser];
-    
-    if (user == nil || user.name == nil || user.password == nil)
-        
-    {
-        
-        [self performSegueWithIdentifier:@"goToLogin" sender:self];
-        
-        return;
-        
-    }
-    
-    
-    
-    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    
-    [self.view addSubview: activityView];
-    
-    activityView.center = CGPointMake(100,200);
-    
-    [activityView startAnimating];
-    
-    
-    
-    NSLog(@"check credentials");
-    
-    [self downloadAll:user.name withPassword:user.password withActivityIndicator:activityView withController:self];
-    
-}
-
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken
 {
     NSString *token = [[devToken description] stringByTrimmingCharactersInSet:      [NSCharacterSet characterSetWithCharactersInString:@"<>"]];

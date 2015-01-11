@@ -180,7 +180,7 @@ static FMDatabaseQueue *_queue;
 {
     // Assume you have a 'date'
     NSCalendar *gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *dateComps = [gregorianCal components: (NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+//    NSDateComponents *dateComps = [gregorianCal components: (NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
     
     [_queue inTransaction:^(FMDatabase *db, BOOL *rollback)
      {

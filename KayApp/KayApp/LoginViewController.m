@@ -44,7 +44,7 @@ NSString* pwdEncoded;
 - (void)viewDidAppear:(BOOL)animated
 {
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,6 +78,8 @@ NSString* pwdEncoded;
                                                                                                         kCFStringEncodingUTF8 ));
     
    [self downloadAll:userEncoded withPassword:pwdEncoded withActivityIndicator:activityView withController:self];
+    
+    
 }
 
 @end

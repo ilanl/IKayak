@@ -78,6 +78,7 @@ NSArray *arr;
     iv.contentMode = UIViewContentModeCenter;
     //[iv sizeToFit];
     self.parent.navigationItem.titleView = iv;
+    [self.parent.navigationItem.titleView layoutIfNeeded];
 }
 
 @end

@@ -20,9 +20,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TitleView" owner:self options:nil];
         self = [nib objectAtIndex:0];
         
-        self.frame = CGRectMake(0,0, 300, 32);
-        
-        self.userInteractionEnabled = YES;
+        self.frame = CGRectMake(-300,0, CGRectGetWidth(self.frame) , 44);
         NSLog(@"titleview control loaded");
         
     }
