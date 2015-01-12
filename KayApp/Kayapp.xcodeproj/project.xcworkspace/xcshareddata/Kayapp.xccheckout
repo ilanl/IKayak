@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CD5798EF-0B8B-497B-94C3-FC3642C6E72D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Kayapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EC9B63A37A1FE74A91274CA4855594183AC4F386</key>
+		<string>https://github.com/ilanl/IKayak.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KayApp/Kayapp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EC9B63A37A1FE74A91274CA4855594183AC4F386</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ilanl/IKayak.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EC9B63A37A1FE74A91274CA4855594183AC4F386</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EC9B63A37A1FE74A91274CA4855594183AC4F386</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IKayak</string>
+		</dict>
+	</array>
+</dict>
+</plist>
