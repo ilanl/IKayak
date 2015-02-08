@@ -223,7 +223,6 @@
 		D226C8911A646DA800BF66B5 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D226C8731A646DA800BF66B5 /* JSONKeyMapper.m */; };
 		D226C8921A646DA800BF66B5 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D226C8751A646DA800BF66B5 /* JSONValueTransformer.m */; };
 		D226C8951A646DA800BF66B5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D226C87A1A646DA800BF66B5 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D226CB4F1A64731B00BF66B5 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D226CB4E1A64731B00BF66B5 /* Pushbots.framework */; };
 		D226CB521A647B3300BF66B5 /* Kayapp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D226CB511A647B3300BF66B5 /* Kayapp-Info.plist */; };
 		D2367D891820659B00586F94 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2367D881820659A00586F94 /* libsqlite3.dylib */; };
 		D253F46918155FB300E3DD0C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253F46718155FB100E3DD0C /* EventKit.framework */; };
@@ -237,6 +236,8 @@
 		D2882F7F17EC7EDD0054841B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F7E17EC7EDD0054841B /* UIKit.framework */; };
 		D2882F8117EC7EDD0054841B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F8017EC7EDD0054841B /* Foundation.framework */; };
 		D2882F8317EC7EDD0054841B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2882F8217EC7EDD0054841B /* CoreGraphics.framework */; };
+		D2C594501A7EB6130096AF7A /* Pushbots.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2C5944F1A7EB6130096AF7A /* Pushbots.plist */; };
+		D2C594511A7EC40B0096AF7A /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D226CB4E1A64731B00BF66B5 /* Pushbots.framework */; };
 		D2C5EF80181CFDBD000242BA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C5EF7F181CFDBD000242BA /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
@@ -561,6 +562,8 @@
 		D2882F7E17EC7EDD0054841B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2882F8017EC7EDD0054841B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2882F8217EC7EDD0054841B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2A85B351A87CD0200C32B02 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		D2C5944F1A7EB6130096AF7A /* Pushbots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Pushbots.plist; path = ../Frameworks/Pushbots.plist; sourceTree = "<group>"; };
 		D2C5EF7F181CFDBD000242BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -576,9 +579,9 @@
 				D253F46918155FB300E3DD0C /* EventKit.framework in Frameworks */,
 				D253F46A18155FB300E3DD0C /* EventKitUI.framework in Frameworks */,
 				D28588DC17EE1B7A00D5AD60 /* MobileCoreServices.framework in Frameworks */,
+				D2C594511A7EC40B0096AF7A /* Pushbots.framework in Frameworks */,
 				D27569EE17EC9CAA0093A991 /* CFNetwork.framework in Frameworks */,
 				D27569CC17EC8A550093A991 /* CoreLocation.framework in Frameworks */,
-				D226CB4F1A64731B00BF66B5 /* Pushbots.framework in Frameworks */,
 				D27569C817EC89D60093A991 /* libsqlite3.0.dylib in Frameworks */,
 				D2882F8117EC7EDD0054841B /* Foundation.framework in Frameworks */,
 				D2882F8317EC7EDD0054841B /* CoreGraphics.framework in Frameworks */,
@@ -1012,6 +1015,7 @@
 		D226C8501A646DA800BF66B5 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
+				D2A85B351A87CD0200C32B02 /* FMDB.h */,
 				D226C8511A646DA800BF66B5 /* FMDatabase.h */,
 				D226C8521A646DA800BF66B5 /* FMDatabase.m */,
 				D226C8531A646DA800BF66B5 /* FMDatabaseAdditions.h */,
@@ -1147,6 +1151,7 @@
 		D2882F8517EC7EDD0054841B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2C5944F1A7EB6130096AF7A /* Pushbots.plist */,
 			);
 			name = "Supporting Files";
 			path = KayApp;
@@ -1186,7 +1191,7 @@
 						DevelopmentTeam = J62AWW3Q79;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1227,6 +1232,7 @@
 				D226C71D1A64685E00BF66B5 /* Booking-page-Approve-button@2x.png in Resources */,
 				D226C7111A64685E00BF66B5 /* surfski-selected.png in Resources */,
 				D226C7331A64685E00BF66B5 /* facebook@2x.png in Resources */,
+				D2C594501A7EB6130096AF7A /* Pushbots.plist in Resources */,
 				D226C72F1A64685E00BF66B5 /* Default-568h@2x.png in Resources */,
 				D226C6FA1A64685E00BF66B5 /* Roboto-Regular.ttf in Resources */,
 				D226C7451A64685E00BF66B5 /* log-out-btn@2x.png in Resources */,
@@ -1488,7 +1494,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = Kayapp;
+				PRODUCT_NAME = kayapp;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1519,7 +1525,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = Kayapp;
+				PRODUCT_NAME = kayapp;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1535,8 +1541,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ilan Levy (WV5Q2Z3AMP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ilan Levy (WV5Q2Z3AMP)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ilanlevy/Desktop/KayApp,
@@ -1551,8 +1557,8 @@
 				OTHER_LDFLAGS = "-lz";
 				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = Kayapp;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "df00bb9e-c28b-409a-9059-7e6908d8c191";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "df00bb9e-c28b-409a-9059-7e6908d8c191";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
@@ -1566,8 +1572,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ilan Levy (WV5Q2Z3AMP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ilan Levy (WV5Q2Z3AMP)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ilanlevy/Desktop/KayApp,
@@ -1582,8 +1588,8 @@
 				OTHER_LDFLAGS = "-lz";
 				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = Kayapp;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "df00bb9e-c28b-409a-9059-7e6908d8c191";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "df00bb9e-c28b-409a-9059-7e6908d8c191";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;

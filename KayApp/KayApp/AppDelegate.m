@@ -23,6 +23,16 @@ AppDelegate *appContext;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
+    [Pushbots getInstance];
+    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
     {
         
@@ -31,37 +41,32 @@ AppDelegate *appContext;
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 50) forBarMetrics:UIBarMetricsDefault];
     }
     
-    [Pushbots getInstance];
-    
     NSString *appName = [[NSBundle bundleWithIdentifier:@"BundleIdentifier"] objectForInfoDictionaryKey:@"CFBundleExecutable"];
     appContext = self;
     [AppLog Log:@"didFinishLaunching - appName: @%", appName];
     
-    // Let the device know we want to receive push notifications
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if(userInfo) {
         // Notification Message
         NSString* notificationMsg = [userInfo valueForKey:@"message"];
         // Custom Field
         NSString* title = [userInfo valueForKey:@"title"];
-        [AppLog Log:@"Notification Msg is %@ and Custom field title = %@", notificationMsg , title];
+        NSLog(@"Notification Msg is %@ and Custom field title = %@", notificationMsg , title);
     }
     
     return YES;
 }
 
--(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *token = [[devToken description] stringByTrimmingCharactersInSet:      [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
-    
-    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    if (token != nil)
-        [[DbAdapter getInstance] updateDeviceToken:token];
-    
-    [AppLog Log:@"didRegisterForRemoteNotificationsWithDeviceToken with token %@", token];
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Open"]) {
+        [[Pushbots getInstance] OpenedNotification];
+        // set Badge to 0
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+        // reset badge on the server
+        [[Pushbots getInstance] resetBadgeCount];
+    }
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
@@ -71,6 +76,11 @@ AppDelegate *appContext;
 
 -(void)onReceivePushNotification:(NSDictionary *) pushDict andPayload:(NSDictionary *)payload
 {
+    
+    [payload valueForKey:@"title"];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"New Alert !" message:[pushDict valueForKey:@"alert"] delegate:self cancelButtonTitle:@"Thanks !" otherButtonTitles: @"Open",nil];
+    [message show];
+    
     @try {
         [AppLog Log:@"onReceivePushNotification"];
         [self reloadBookings];
