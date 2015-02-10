@@ -240,27 +240,27 @@
 		D2C594501A7EB6130096AF7A /* Pushbots.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2C5944F1A7EB6130096AF7A /* Pushbots.plist */; };
 		D2C594511A7EC40B0096AF7A /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D226CB4E1A64731B00BF66B5 /* Pushbots.framework */; };
 		D2C5EF80181CFDBD000242BA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C5EF7F181CFDBD000242BA /* CoreTelephony.framework */; };
-		D2F074501A8A21E200A79CA1 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F0744F1A8A21E200A79CA1 /* InterfaceController.m */; };
-		D2F074521A8A21E200A79CA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F074511A8A21E200A79CA1 /* Images.xcassets */; };
-		D2F074561A8A21E200A79CA1 /* kayapp WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D2F074551A8A21E200A79CA1 /* kayapp WatchKit App.app */; };
-		D2F0745E1A8A21E200A79CA1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F0745C1A8A21E200A79CA1 /* Interface.storyboard */; };
-		D2F074601A8A21E200A79CA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F0745F1A8A21E200A79CA1 /* Images.xcassets */; };
-		D2F074631A8A21E200A79CA1 /* kayapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2F0744A1A8A21E200A79CA1 /* kayapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2F074741A8A24F700A79CA1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F074731A8A24F700A79CA1 /* InterfaceController.swift */; };
+		D2F074761A8A24F700A79CA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F074751A8A24F700A79CA1 /* Images.xcassets */; };
+		D2F0747A1A8A24F800A79CA1 /* kayapp WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = D2F074791A8A24F700A79CA1 /* kayapp WatchKit App.app */; };
+		D2F074821A8A24F800A79CA1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F074801A8A24F800A79CA1 /* Interface.storyboard */; };
+		D2F074841A8A24F800A79CA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F074831A8A24F800A79CA1 /* Images.xcassets */; };
+		D2F074871A8A24F800A79CA1 /* kayapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D2F0746F1A8A24F700A79CA1 /* kayapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D2F074571A8A21E200A79CA1 /* PBXContainerItemProxy */ = {
+		D2F0747B1A8A24F800A79CA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2882F7317EC7EDD0054841B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2F074541A8A21E200A79CA1;
+			remoteGlobalIDString = D2F074781A8A24F700A79CA1;
 			remoteInfo = "kayapp WatchKit App";
 		};
-		D2F074611A8A21E200A79CA1 /* PBXContainerItemProxy */ = {
+		D2F074851A8A24F800A79CA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2882F7317EC7EDD0054841B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2F074491A8A21E200A79CA1;
+			remoteGlobalIDString = D2F0746E1A8A24F700A79CA1;
 			remoteInfo = "kayapp WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
@@ -281,7 +281,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D2F074631A8A21E200A79CA1 /* kayapp WatchKit Extension.appex in Embed App Extensions */,
+				D2F074871A8A24F800A79CA1 /* kayapp WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,15 +600,14 @@
 		D2A85B351A87CD0200C32B02 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		D2C5944F1A7EB6130096AF7A /* Pushbots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Pushbots.plist; path = ../Frameworks/Pushbots.plist; sourceTree = "<group>"; };
 		D2C5EF7F181CFDBD000242BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		D2F0744A1A8A21E200A79CA1 /* kayapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "kayapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F0744D1A8A21E200A79CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2F0744E1A8A21E200A79CA1 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		D2F0744F1A8A21E200A79CA1 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		D2F074511A8A21E200A79CA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D2F074551A8A21E200A79CA1 /* kayapp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kayapp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F0745B1A8A21E200A79CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2F0745D1A8A21E200A79CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D2F0745F1A8A21E200A79CA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D2F0746F1A8A24F700A79CA1 /* kayapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "kayapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F074721A8A24F700A79CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F074731A8A24F700A79CA1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D2F074751A8A24F700A79CA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D2F074791A8A24F700A79CA1 /* kayapp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kayapp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F0747F1A8A24F800A79CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F074811A8A24F800A79CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D2F074831A8A24F800A79CA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,7 +631,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2F074471A8A21E200A79CA1 /* Frameworks */ = {
+		D2F0746C1A8A24F700A79CA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -793,8 +792,8 @@
 				D226C82C1A646BB600BF66B5 /* KayApp */,
 				D2756A5617EDC9B10093A991 /* drc.sqlite */,
 				D27569C717EC89D60093A991 /* libsqlite3.0.dylib */,
-				D2F0744B1A8A21E200A79CA1 /* kayapp WatchKit Extension */,
-				D2F074591A8A21E200A79CA1 /* kayapp WatchKit App */,
+				D2F074701A8A24F700A79CA1 /* kayapp WatchKit Extension */,
+				D2F0747D1A8A24F800A79CA1 /* kayapp WatchKit App */,
 				D2882F7D17EC7EDD0054841B /* Frameworks */,
 				D27569F817EC9E9D0093A991 /* Classes */,
 				D2882F8517EC7EDD0054841B /* Supporting Files */,
@@ -806,8 +805,8 @@
 			isa = PBXGroup;
 			children = (
 				D2882F7B17EC7EDD0054841B /* Kayapp.app */,
-				D2F0744A1A8A21E200A79CA1 /* kayapp WatchKit Extension.appex */,
-				D2F074551A8A21E200A79CA1 /* kayapp WatchKit App.app */,
+				D2F0746F1A8A24F700A79CA1 /* kayapp WatchKit Extension.appex */,
+				D2F074791A8A24F700A79CA1 /* kayapp WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1218,39 +1217,38 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		D2F0744B1A8A21E200A79CA1 /* kayapp WatchKit Extension */ = {
+		D2F074701A8A24F700A79CA1 /* kayapp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D2F0744E1A8A21E200A79CA1 /* InterfaceController.h */,
-				D2F0744F1A8A21E200A79CA1 /* InterfaceController.m */,
-				D2F074511A8A21E200A79CA1 /* Images.xcassets */,
-				D2F0744C1A8A21E200A79CA1 /* Supporting Files */,
+				D2F074731A8A24F700A79CA1 /* InterfaceController.swift */,
+				D2F074751A8A24F700A79CA1 /* Images.xcassets */,
+				D2F074711A8A24F700A79CA1 /* Supporting Files */,
 			);
 			path = "kayapp WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		D2F0744C1A8A21E200A79CA1 /* Supporting Files */ = {
+		D2F074711A8A24F700A79CA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2F0744D1A8A21E200A79CA1 /* Info.plist */,
+				D2F074721A8A24F700A79CA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D2F074591A8A21E200A79CA1 /* kayapp WatchKit App */ = {
+		D2F0747D1A8A24F800A79CA1 /* kayapp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				D2F0745C1A8A21E200A79CA1 /* Interface.storyboard */,
-				D2F0745F1A8A21E200A79CA1 /* Images.xcassets */,
-				D2F0745A1A8A21E200A79CA1 /* Supporting Files */,
+				D2F074801A8A24F800A79CA1 /* Interface.storyboard */,
+				D2F074831A8A24F800A79CA1 /* Images.xcassets */,
+				D2F0747E1A8A24F800A79CA1 /* Supporting Files */,
 			);
 			path = "kayapp WatchKit App";
 			sourceTree = "<group>";
 		};
-		D2F0745A1A8A21E200A79CA1 /* Supporting Files */ = {
+		D2F0747E1A8A24F800A79CA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2F0745B1A8A21E200A79CA1 /* Info.plist */,
+				D2F0747F1A8A24F800A79CA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1271,36 +1269,36 @@
 			buildRules = (
 			);
 			dependencies = (
-				D2F074621A8A21E200A79CA1 /* PBXTargetDependency */,
+				D2F074861A8A24F800A79CA1 /* PBXTargetDependency */,
 			);
 			name = Kayapp;
 			productName = KayApp;
 			productReference = D2882F7B17EC7EDD0054841B /* Kayapp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D2F074491A8A21E200A79CA1 /* kayapp WatchKit Extension */ = {
+		D2F0746E1A8A24F700A79CA1 /* kayapp WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2F074691A8A21E200A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit Extension" */;
+			buildConfigurationList = D2F0748B1A8A24F800A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit Extension" */;
 			buildPhases = (
-				D2F074461A8A21E200A79CA1 /* Sources */,
-				D2F074471A8A21E200A79CA1 /* Frameworks */,
-				D2F074481A8A21E200A79CA1 /* Resources */,
+				D2F0746B1A8A24F700A79CA1 /* Sources */,
+				D2F0746C1A8A24F700A79CA1 /* Frameworks */,
+				D2F0746D1A8A24F700A79CA1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D2F074581A8A21E200A79CA1 /* PBXTargetDependency */,
+				D2F0747C1A8A24F800A79CA1 /* PBXTargetDependency */,
 			);
 			name = "kayapp WatchKit Extension";
 			productName = "kayapp WatchKit Extension";
-			productReference = D2F0744A1A8A21E200A79CA1 /* kayapp WatchKit Extension.appex */;
+			productReference = D2F0746F1A8A24F700A79CA1 /* kayapp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		D2F074541A8A21E200A79CA1 /* kayapp WatchKit App */ = {
+		D2F074781A8A24F700A79CA1 /* kayapp WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2F074681A8A21E200A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit App" */;
+			buildConfigurationList = D2F074881A8A24F800A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit App" */;
 			buildPhases = (
-				D2F074531A8A21E200A79CA1 /* Resources */,
+				D2F074771A8A24F700A79CA1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1308,7 +1306,7 @@
 			);
 			name = "kayapp WatchKit App";
 			productName = "kayapp WatchKit App";
-			productReference = D2F074551A8A21E200A79CA1 /* kayapp WatchKit App.app */;
+			productReference = D2F074791A8A24F700A79CA1 /* kayapp WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
@@ -1328,11 +1326,11 @@
 							};
 						};
 					};
-					D2F074491A8A21E200A79CA1 = {
+					D2F0746E1A8A24F700A79CA1 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = J62AWW3Q79;
 					};
-					D2F074541A8A21E200A79CA1 = {
+					D2F074781A8A24F700A79CA1 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -1352,8 +1350,8 @@
 			projectRoot = "";
 			targets = (
 				D2882F7A17EC7EDD0054841B /* Kayapp */,
-				D2F074491A8A21E200A79CA1 /* kayapp WatchKit Extension */,
-				D2F074541A8A21E200A79CA1 /* kayapp WatchKit App */,
+				D2F0746E1A8A24F700A79CA1 /* kayapp WatchKit Extension */,
+				D2F074781A8A24F700A79CA1 /* kayapp WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -1515,21 +1513,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2F074481A8A21E200A79CA1 /* Resources */ = {
+		D2F0746D1A8A24F700A79CA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F074561A8A21E200A79CA1 /* kayapp WatchKit App.app in Resources */,
-				D2F074521A8A21E200A79CA1 /* Images.xcassets in Resources */,
+				D2F0747A1A8A24F800A79CA1 /* kayapp WatchKit App.app in Resources */,
+				D2F074761A8A24F700A79CA1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2F074531A8A21E200A79CA1 /* Resources */ = {
+		D2F074771A8A24F700A79CA1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F0745E1A8A21E200A79CA1 /* Interface.storyboard in Resources */,
-				D2F074601A8A21E200A79CA1 /* Images.xcassets in Resources */,
+				D2F074821A8A24F800A79CA1 /* Interface.storyboard in Resources */,
+				D2F074841A8A24F800A79CA1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1614,26 +1612,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2F074461A8A21E200A79CA1 /* Sources */ = {
+		D2F0746B1A8A24F700A79CA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F074501A8A21E200A79CA1 /* InterfaceController.m in Sources */,
+				D2F074741A8A24F700A79CA1 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D2F074581A8A21E200A79CA1 /* PBXTargetDependency */ = {
+		D2F0747C1A8A24F800A79CA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2F074541A8A21E200A79CA1 /* kayapp WatchKit App */;
-			targetProxy = D2F074571A8A21E200A79CA1 /* PBXContainerItemProxy */;
+			target = D2F074781A8A24F700A79CA1 /* kayapp WatchKit App */;
+			targetProxy = D2F0747B1A8A24F800A79CA1 /* PBXContainerItemProxy */;
 		};
-		D2F074621A8A21E200A79CA1 /* PBXTargetDependency */ = {
+		D2F074861A8A24F800A79CA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2F074491A8A21E200A79CA1 /* kayapp WatchKit Extension */;
-			targetProxy = D2F074611A8A21E200A79CA1 /* PBXContainerItemProxy */;
+			target = D2F0746E1A8A24F700A79CA1 /* kayapp WatchKit Extension */;
+			targetProxy = D2F074851A8A24F800A79CA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1646,10 +1644,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D2F0745C1A8A21E200A79CA1 /* Interface.storyboard */ = {
+		D2F074801A8A24F800A79CA1 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D2F0745D1A8A21E200A79CA1 /* Base */,
+				D2F074811A8A24F800A79CA1 /* Base */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -1734,6 +1732,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ilanlevy/Desktop/KayApp,
@@ -1765,6 +1764,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ilanlevy/Desktop/KayApp,
@@ -1787,9 +1787,10 @@
 			};
 			name = Release;
 		};
-		D2F074641A8A21E200A79CA1 /* Debug */ = {
+		D2F074891A8A24F800A79CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1805,18 +1806,21 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "kayapp WatchKit Extension/Info.plist";
+				IBSC_MODULE = kayapp_WatchKit_Extension;
+				INFOPLIST_FILE = "kayapp WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Debug;
 		};
-		D2F074651A8A21E200A79CA1 /* Release */ = {
+		D2F0748A1A8A24F800A79CA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1829,19 +1833,20 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "kayapp WatchKit Extension/Info.plist";
+				IBSC_MODULE = kayapp_WatchKit_Extension;
+				INFOPLIST_FILE = "kayapp WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
-		D2F074661A8A21E200A79CA1 /* Debug */ = {
+		D2F0748C1A8A24F800A79CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1857,21 +1862,19 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IBSC_MODULE = kayapp_WatchKit_Extension;
-				INFOPLIST_FILE = "kayapp WatchKit App/Info.plist";
+				INFOPLIST_FILE = "kayapp WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		D2F074671A8A21E200A79CA1 /* Release */ = {
+		D2F0748D1A8A24F800A79CA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1884,14 +1887,12 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				IBSC_MODULE = kayapp_WatchKit_Extension;
-				INFOPLIST_FILE = "kayapp WatchKit App/Info.plist";
+				INFOPLIST_FILE = "kayapp WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -1916,19 +1917,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D2F074681A8A21E200A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit App" */ = {
+		D2F074881A8A24F800A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2F074661A8A21E200A79CA1 /* Debug */,
-				D2F074671A8A21E200A79CA1 /* Release */,
+				D2F074891A8A24F800A79CA1 /* Debug */,
+				D2F0748A1A8A24F800A79CA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		D2F074691A8A21E200A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit Extension" */ = {
+		D2F0748B1A8A24F800A79CA1 /* Build configuration list for PBXNativeTarget "kayapp WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2F074641A8A21E200A79CA1 /* Debug */,
-				D2F074651A8A21E200A79CA1 /* Release */,
+				D2F0748C1A8A24F800A79CA1 /* Debug */,
+				D2F0748D1A8A24F800A79CA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
