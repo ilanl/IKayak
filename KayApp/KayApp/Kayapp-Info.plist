@@ -47,10 +47,6 @@
 		<string>Roboto-ThinItalic.ttf</string>
 		<string>Roboto-Thin.ttf</string>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
