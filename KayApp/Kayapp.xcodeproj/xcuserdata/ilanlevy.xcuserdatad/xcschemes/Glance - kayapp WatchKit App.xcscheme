@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0620"
+   version = "2.0">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+               BuildableName = "kayapp WatchKit App.app"
+               BlueprintName = "kayapp WatchKit App"
+               ReferencedContainer = "container:kayapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D21A689F1A8A3879007035A9"
+               BuildableName = "kayapp WatchKit Extension.appex"
+               BlueprintName = "kayapp WatchKit Extension"
+               ReferencedContainer = "container:kayapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D2882F7A17EC7EDD0054841B"
+               BuildableName = "Kayapp.app"
+               BlueprintName = "Kayapp"
+               ReferencedContainer = "container:kayapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+            BuildableName = "kayapp WatchKit App.app"
+            BlueprintName = "kayapp WatchKit App"
+            ReferencedContainer = "container:kayapp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "4">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/kayapp">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+            BuildableName = "kayapp WatchKit App.app"
+            BlueprintName = "kayapp WatchKit App"
+            ReferencedContainer = "container:kayapp.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+            BuildableName = "kayapp WatchKit App.app"
+            BlueprintName = "kayapp WatchKit App"
+            ReferencedContainer = "container:kayapp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/kayapp">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+            BuildableName = "kayapp WatchKit App.app"
+            BlueprintName = "kayapp WatchKit App"
+            ReferencedContainer = "container:kayapp.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D21A68AA1A8A3879007035A9"
+            BuildableName = "kayapp WatchKit App.app"
+            BlueprintName = "kayapp WatchKit App"
+            ReferencedContainer = "container:kayapp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

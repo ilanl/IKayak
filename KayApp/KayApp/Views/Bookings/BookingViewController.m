@@ -48,6 +48,7 @@
     [[UITabBar appearance] setBarTintColor:[UIColor colorWithHexString:@"2C2C2C" withAlpha:1.0]];
     
     bookings = [[DbAdapter getInstance] getBookings];
+
     states = [NSArray arrayWithObjects: @"Booking-page-Approve-button.png", @"Booking-page-Cancel-Button.png",nil];
 }
 

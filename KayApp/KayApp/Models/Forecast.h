@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+#import "Booking.h"
 
 @interface Forecast : JSONModel
 @property (nonatomic, strong) NSString *Date;
@@ -20,5 +21,6 @@
 @property (nonatomic, strong) NSString *WindDir;
 @property (nonatomic, strong) NSString *SwellSecs;
 @property (nonatomic, strong) NSString *WindF;
+@property (nonatomic, strong) Booking<Optional>* Booking;
 
 @end

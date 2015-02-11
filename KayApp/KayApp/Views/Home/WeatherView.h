@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblWindSpeed;
 @property (weak, nonatomic) IBOutlet UILabel *lblWaveLong;
 @property (weak, nonatomic) IBOutlet UIImageView *imgCompassArrow;
+@property (weak, nonatomic) IBOutlet UIImageView *kayakTypeImg;
+@property (weak, nonatomic) IBOutlet UILabel *kayakName;
 
 
 @end

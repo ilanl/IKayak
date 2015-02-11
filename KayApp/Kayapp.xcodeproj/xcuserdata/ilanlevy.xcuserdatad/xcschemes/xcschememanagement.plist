@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - kayapp WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>KayApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -14,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Notification - kayapp WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>kayapp WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,6 +32,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D21A68AA1A8A3879007035A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D23ABE8F1A8A39B100647EB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D2882F7A17EC7EDD0054841B</key>
 		<dict>
 			<key>primary</key>
@@ -33,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>D2F074781A8A24F700A79CA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2F5E4151A8A377000832EA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

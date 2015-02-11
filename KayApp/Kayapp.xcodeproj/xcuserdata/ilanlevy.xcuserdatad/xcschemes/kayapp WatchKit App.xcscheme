@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+               BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
                BuildableName = "kayapp WatchKit App.app"
                BlueprintName = "kayapp WatchKit App"
+               ReferencedContainer = "container:kayapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D23ABE841A8A39B100647EB5"
+               BuildableName = "kayapp WatchKit Extension.appex"
+               BlueprintName = "kayapp WatchKit Extension"
                ReferencedContainer = "container:kayapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,20 +48,6 @@
                ReferencedContainer = "container:kayapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2F074491A8A21E200A79CA1"
-               BuildableName = "kayapp WatchKit Extension.appex"
-               BlueprintName = "kayapp WatchKit Extension"
-               ReferencedContainer = "container:kayapp.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+            BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
             BuildableName = "kayapp WatchKit App.app"
             BlueprintName = "kayapp WatchKit App"
             ReferencedContainer = "container:kayapp.xcodeproj">
@@ -82,7 +82,7 @@
          RemotePath = "/kayapp">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+            BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
             BuildableName = "kayapp WatchKit App.app"
             BlueprintName = "kayapp WatchKit App"
             ReferencedContainer = "container:kayapp.xcodeproj">
@@ -91,7 +91,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+            BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
             BuildableName = "kayapp WatchKit App.app"
             BlueprintName = "kayapp WatchKit App"
             ReferencedContainer = "container:kayapp.xcodeproj">
@@ -112,7 +112,7 @@
          RemotePath = "/kayapp">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+            BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
             BuildableName = "kayapp WatchKit App.app"
             BlueprintName = "kayapp WatchKit App"
             ReferencedContainer = "container:kayapp.xcodeproj">
@@ -121,7 +121,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2F074541A8A21E200A79CA1"
+            BlueprintIdentifier = "D23ABE8F1A8A39B100647EB5"
             BuildableName = "kayapp WatchKit App.app"
             BlueprintName = "kayapp WatchKit App"
             ReferencedContainer = "container:kayapp.xcodeproj">

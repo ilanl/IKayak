@@ -67,6 +67,21 @@ NSArray *arr;
     lblSwellSecs.text = [[NSString alloc]initWithFormat:@"%@",f.SwellSecs];
     [lblSwellSecs setFont:[UIFont fontWithName:@"Roboto-Regular" size:22]];
     
+
+    if (f.Booking != nil)
+    {
+        
+        self.kayakName.text = f.Booking.KayakName;
+        
+        self.kayakName.hidden = NO;
+        self.kayakTypeImg.hidden = NO;
+        [self.kayakTypeImg layoutIfNeeded];
+    }
+    else
+    {
+        self.kayakName.hidden = YES;
+        self.kayakTypeImg.hidden = YES;
+    }
     NSArray *items = @[@"N", @"NNE", @"NE", @"ENE",@"E",@"ESE",@"SE",@"SSE",@"S",@"SSW",@"SW",@"WSW",@"W",@"WNW",@"NW",@"NNW"];
     
     long windOrientationIndex = [items indexOfObject:f.WindDir];

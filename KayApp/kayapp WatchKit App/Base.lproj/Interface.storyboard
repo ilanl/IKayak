@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Refresh Bookings" id="oT4-61-6hc">
+                            <connections>
+                                <action selector="getForecastsWithBookings" destination="AgC-eL-Hgc" id="sK5-l4-Hfj"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="46" alignment="left" text="Label" id="Bsz-90-5Vc"/>
+                    </items>
+                    <connections>
+                        <outlet property="btnBookings" destination="oT4-61-6hc" id="y1P-Y8-8Uu"/>
+                        <outlet property="lblBookings" destination="Bsz-90-5Vc" id="mSE-XS-meD"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>

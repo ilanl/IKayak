@@ -18,6 +18,7 @@
 {
 
 }
+
 AppDelegate *appContext;
 
 
@@ -104,6 +105,38 @@ AppDelegate *appContext;
     }
     @finally {
         
+    }
+}
+
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary*) userInfo reply:(void(^)(NSDictionary *replyInfo))reply
+{
+    if ( [[userInfo objectForKey:@"request"] isEqualToString:@"forecasts"])
+    {
+        NSMutableArray *forecastJsonArray = [NSMutableArray new];
+        NSArray* forecastsList = [[[DbAdapter getInstance] getForecasts] copy];
+        
+        for (int i=0; i<[forecastsList count] ; i++)
+        {
+            Forecast* forecast = [forecastsList objectAtIndex:i];
+            NSMutableDictionary* forecastDict = [NSMutableDictionary new];
+            
+            [forecastDict setValue:forecast.WaveH forKey:@"height"];
+            [forecastDict setValue:forecast.Date forKey:@"date"];
+            [forecastDict setValue:forecast.Hour forKey:@"hour"];
+            
+            if (forecast.Booking != nil)
+            {
+                [forecastDict setValue:forecast.Booking.KayakName forKey:@"name"];
+                [forecastDict setValue:[NSString stringWithFormat:@"%i",forecast.Booking.Type] forKey:@"type"];
+                [forecastDict setValue:forecast.Booking.Time forKey:@"hour"];
+                [forecastDict setValue:forecast.Booking.TripKey forKey:@"trip"];
+            }
+            
+            [forecastJsonArray addObject:forecastDict];
+        }
+        
+        reply(@{@"forecasts": forecastJsonArray});
+
     }
 }
 

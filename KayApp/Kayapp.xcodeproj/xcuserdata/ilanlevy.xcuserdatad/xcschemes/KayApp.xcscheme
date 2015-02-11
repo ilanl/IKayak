@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D2882F7A17EC7EDD0054841B"
                BuildableName = "Kayapp.app"
                BlueprintName = "Kayapp"
-               ReferencedContainer = "container:Kayapp.xcodeproj">
+               ReferencedContainer = "container:kayapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "D2882F7A17EC7EDD0054841B"
             BuildableName = "Kayapp.app"
             BlueprintName = "Kayapp"
-            ReferencedContainer = "container:Kayapp.xcodeproj">
+            ReferencedContainer = "container:kayapp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "D2882F7A17EC7EDD0054841B"
             BuildableName = "Kayapp.app"
             BlueprintName = "Kayapp"
-            ReferencedContainer = "container:Kayapp.xcodeproj">
+            ReferencedContainer = "container:kayapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "D2882F7A17EC7EDD0054841B"
             BuildableName = "Kayapp.app"
             BlueprintName = "Kayapp"
-            ReferencedContainer = "container:Kayapp.xcodeproj">
+            ReferencedContainer = "container:kayapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

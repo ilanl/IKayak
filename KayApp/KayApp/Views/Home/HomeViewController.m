@@ -58,6 +58,7 @@
      selector:@selector(applicationDidBecomeActiveNotification:)
      name:UIApplicationDidBecomeActiveNotification
      object:[UIApplication sharedApplication]];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

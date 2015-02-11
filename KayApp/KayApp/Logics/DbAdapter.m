@@ -66,7 +66,8 @@ static FMDatabaseQueue *_queue;
     
 }
 
-- (NSString *) getDBPath {
+- (NSString *) getDBPath
+{
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
 	NSString *documentsDir = [paths objectAtIndex:0];
 	return [documentsDir stringByAppendingPathComponent:@"drc.sqlite"];
@@ -193,7 +194,7 @@ static FMDatabaseQueue *_queue;
 //             if (hourInt < localHourInt)
 //                 continue;
              
-             [db executeUpdate:@"INSERT INTO Forecast(Day,Hour,TempC,WaterTempC,WaveH,Weather,SwellSecs,WindDir,WindF) VALUES(?,?,?,?,?,?,?,?,?)",
+             [db executeUpdate:@"INSERT INTO Forecast(Day,Hour,TempC,WaterTempC,WaveH,Weather,SwellSecs,WindDir,WindF,Date) VALUES(?,?,?,?,?,?,?,?,?,?)",
                  [NSString stringWithFormat:@"%@", f.Day],
                  [NSString stringWithFormat:@"%@", f.Hour],
                  [NSString stringWithFormat:@"%@", f.TempC],
@@ -202,8 +203,9 @@ static FMDatabaseQueue *_queue;
                  [NSString stringWithFormat:@"%@", f.Weather],
                  [NSString stringWithFormat:@"%@", f.SwellSecs],
                  [NSString stringWithFormat:@"%@", f.WindDir],
-                 [NSString stringWithFormat:@"%@", f.WindF],nil];
-         
+                 [NSString stringWithFormat:@"%@", f.WindF],
+                 [NSString stringWithFormat:@"%@", f.Date],
+                 nil];
              [AppLog Log:@"Added Forecast: %@", f.Day];
          }
      }];
@@ -282,7 +284,7 @@ static FMDatabaseQueue *_queue;
     NSMutableArray *forecastArray = [[NSMutableArray alloc] init];
     [_queue inDatabase:^(FMDatabase *db)
      {
-         FMResultSet *results = [db executeQuery:@"SELECT Day,Hour,TempC,WaterTempC,WaveH,Weather,SwellSecs,WindDir,WindF FROM Forecast"];
+         FMResultSet *results = [db executeQuery:@"SELECT Day,Hour,TempC,WaterTempC,WaveH,Weather,SwellSecs,WindDir,WindF,Date FROM Forecast"];
     
          while([results next])
          {
@@ -296,15 +298,62 @@ static FMDatabaseQueue *_queue;
              forecast.SwellSecs = [results stringForColumnIndex:6];
              forecast.WindDir = [results stringForColumnIndex:7];
              forecast.WindF = [results stringForColumnIndex:8];
+             forecast.Date = [results stringForColumnIndex:9];
         
              [forecastArray addObject:forecast];
          }
          [results close];
      }];
     
-     [AppLog Log:@"Got %i forecasts", [forecastArray count]];
+    [AppLog Log:@"Got %i forecasts", [forecastArray count]];
+    
+    NSArray* bookings = [[self getBookings] copy];
+    
+    [AppLog Log:@"Attaching bookings to forecast if any", [bookings count]];
+    
+    for (int i=0; i<[forecastArray count] ; i++)
+    {
+        Forecast* forecast = [forecastArray objectAtIndex:i];
+        for (int j=0; j<[bookings count]; j++)
+        {
+            Booking* booking = [bookings objectAtIndex:j];
+            if ([self checkIfForecastMatchTripTime: booking andForecast:forecast])
+            {
+                forecast.Booking = booking;
+            }
+        }
+    }
     
     return forecastArray;
+}
+
+-(BOOL) checkIfForecastMatchTripTime:(Booking*) booking andForecast:(Forecast*) forecast
+{
+    NSLog(@"booking date:%@",booking.OutingDate);
+    NSLog(@"forecast date:%@",forecast.Date);
+    NSDate* dateBooking = [booking getAbsoluteDate:0];
+    NSDate* dateForecast = [NSDate dateWithTimeIntervalSince1970:[forecast.Date doubleValue]];
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d+):(\\d*)"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSArray *matches = [regex matchesInString:forecast.Hour
+                                      options:0
+                                        range:NSMakeRange(0, [forecast.Hour length])];
+
+    NSString* hour = [forecast.Hour substringWithRange:[matches[0] range]];
+    NSArray *arrHoursAndMinutes = [hour componentsSeparatedByString:@":"];
+    double mins = [arrHoursAndMinutes[1] doubleValue];
+    double hrs = [arrHoursAndMinutes[0] doubleValue];
+
+    if (dateBooking >= [dateForecast dateByAddingTimeInterval:(hrs-10)*60*60])
+    {
+        if (dateBooking <= [dateForecast dateByAddingTimeInterval:(hrs*60*60+mins*60)])
+        {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 -(NSMutableArray *) getKayaksByType:(int) type
