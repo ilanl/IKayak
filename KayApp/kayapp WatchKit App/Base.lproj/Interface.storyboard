@@ -10,19 +10,71 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="Refresh Bookings" id="oT4-61-6hc">
-                            <connections>
-                                <action selector="getForecastsWithBookings" destination="AgC-eL-Hgc" id="sK5-l4-Hfj"/>
-                            </connections>
-                        </button>
-                        <label width="136" height="46" alignment="left" text="Label" id="Bsz-90-5Vc"/>
+                        <group width="1" alignment="left" id="8Vh-Uc-CIY">
+                            <items>
+                                <button width="1" alignment="left" title="Refresh Bookings" id="oT4-61-6hc">
+                                    <connections>
+                                        <action selector="getForecastsWithBookings" destination="AgC-eL-Hgc" id="sK5-l4-Hfj"/>
+                                        <segue destination="yIq-sZ-Tso" kind="push" id="mku-I8-qaa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="j9m-QS-hpd"/>
                     </items>
                     <connections>
                         <outlet property="btnBookings" destination="oT4-61-6hc" id="y1P-Y8-8Uu"/>
-                        <outlet property="lblBookings" destination="Bsz-90-5Vc" id="mSE-XS-meD"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="-144" y="189"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="sle-H8-ifh">
+            <objects>
+                <controller id="yIq-sZ-Tso">
+                    <items>
+                        <table alignment="left" id="dwR-fS-jPp">
+                            <items>
+                                <tableRow id="BvE-uK-kYr">
+                                    <group key="rootItem" width="1" alignment="left" id="CVW-Jt-y62">
+                                        <items>
+                                            <imageView alignment="left" id="Ob4-ls-OaM"/>
+                                            <label height="41" alignment="left" text="Label" id="2Ae-mc-ot6"/>
+                                        </items>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="97" y="80"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="HjY-pK-pbC">
+            <objects>
+                <controller id="dqw-eg-NPr">
+                    <items>
+                        <group width="1" alignment="left" id="T5e-Dd-ixr">
+                            <items>
+                                <label alignment="left" text="Label" id="wbU-AO-PSM"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="SPn-Pg-MFm">
+                            <items>
+                                <button width="1" alignment="left" title="Button" id="6Pl-4I-8qn"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="1VZ-aR-Ufp">
+                            <items>
+                                <button width="1" alignment="left" title="Button" id="oeK-5b-PJC"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="96" y="328"/>
         </scene>
     </scenes>
 </document>
